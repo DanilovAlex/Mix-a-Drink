@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Alcohol" representedClassName="Alcohol" parentEntity="Ingridient" syncable="YES" codeGenerationType="class">
+        <attribute name="strength" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresAlcohol" inverseEntity="Cocktail" syncable="YES"/>
+    </entity>
+    <entity name="Amount" representedClassName="Amount" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="amounts" inverseEntity="Cocktail" syncable="YES"/>
+    </entity>
+    <entity name="Cocktail" representedClassName="Cocktail" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Amount" inverseName="usedIn" inverseEntity="Amount" syncable="YES"/>
+        <relationship name="requiresAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alcohol" inverseName="usedIn" inverseEntity="Alcohol" syncable="YES"/>
+        <relationship name="requiresGlass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Glass" inverseName="usedIn" inverseEntity="Glass" syncable="YES"/>
+        <relationship name="requiresNonAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonAlcohol" inverseName="usedIn" inverseEntity="NonAlcohol" syncable="YES"/>
+    </entity>
+    <entity name="Glass" representedClassName="Glass" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresGlass" inverseEntity="Cocktail" syncable="YES"/>
+    </entity>
+    <entity name="Ingridient" representedClassName="Ingridient" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isAvailible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NonAlcohol" representedClassName="NonAlcohol" parentEntity="Ingridient" syncable="YES" codeGenerationType="class">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresNonAlcohol" inverseEntity="Cocktail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Ingridient" positionX="-326" positionY="216" width="128" height="90"/>
+        <element name="Alcohol" positionX="-117" positionY="-18" width="128" height="88"/>
+        <element name="NonAlcohol" positionX="-576" positionY="-1" width="128" height="73"/>
+        <element name="Glass" positionX="-119" positionY="-295" width="128" height="88"/>
+        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="163"/>
+        <element name="Amount" positionX="-576" positionY="-297" width="128" height="88"/>
+    </elements>
 </model>
