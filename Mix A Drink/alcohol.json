@@ -1,0 +1,253 @@
+{"alcohol":
+    [
+     {
+     "name": "Angostura Bitter",
+     "type": "Bitter",
+     "strength": 44.7
+     },
+     {
+     "name": "Aperol",
+     "type": "Bitter",
+     "strength": 11
+     },
+     {
+     "name": "Campari",
+     "type": "Bitter",
+     "strength": 21
+     },
+     {
+     "name": "Maritni Extra Dry",
+     "type": "Bitter",
+     "strength": 18
+     },
+     {
+     "name": "Martini Rosso",
+     "type": "Bitter",
+     "strength": 16
+     },
+     {
+     "name": "Amaretto",
+     "type": "Liqueur",
+     "strength": 28
+     },
+     {
+     "name": "Apricot Brandy",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Baileys Irish Cream",
+     "type": "Liqueur",
+     "strength": 17
+     },
+     {
+     "name": "Banana Liqueur",
+     "type": "Liqueur",
+     "strength": 17
+     },
+     {
+     "name": "Blue Curaco",
+     "type": "Liqueur",
+     "strength": 21
+     },
+     {
+     "name": "Butterscotch Liqueur",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Cherry Brandy",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Creme De Cacao (Brown)",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Creme De Cacao (White)",
+     "type": "Liqueur",
+     "strength": 25
+     },
+     {
+     "name": "Creme De Casis",
+     "type": "Liqueur",
+     "strength": 17
+     },
+     {
+     "name": "Creme De Menthe (Green)",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Creme De Menthe (White)",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Drambuie",
+     "type": "Liqueur",
+     "strength": 40
+     },
+     {
+     "name": "Frangelico",
+     "type": "Liqueur",
+     "strength": 20
+     },
+     {
+     "name": "Galliano",
+     "type": "Liqueur",
+     "strength": 42.3
+     },
+     {
+     "name": "Grand Marnier",
+     "type": "Liqueur",
+     "strength": 40
+     },
+     {
+     "name": "Kahlua",
+     "type": "Liqueur",
+     "strength": 20
+     },
+     {
+     "name": "Limoncello",
+     "type": "Liqueur",
+     "strength": 38
+     },
+     {
+     "name": "Malibu",
+     "type": "Liqueur",
+     "strength": 21
+     },
+     {
+     "name": "Maraschino",
+     "type": "Liqueur",
+     "strength": 24
+     },
+     {
+     "name": "Midori",
+     "type": "Liqueur",
+     "strength": 20
+     },
+     {
+     "name": "Peach Tree Schnaps",
+     "type": "Liqueur",
+     "strength": 20
+     },
+     {
+     "name": "Pisang Ambon Liqueur",
+     "type": "Liqueur",
+     "strength": 20
+     },
+     {
+     "name": "Sambuca",
+     "type": "Liqueur",
+     "strength": 40
+     },
+     {
+     "name": "Southern Comfort",
+     "type": "Liqueur",
+     "strength": 35
+     },
+     {
+     "name": "Sloe Gin",
+     "type": "Liqueur",
+     "strength": 33
+     },
+     {
+     "name": "Triple Sec",
+     "type": "Liqueur",
+     "strength": 38
+     },
+     {
+     "name": "Absinthe",
+     "type": "Spirit",
+     "strength": 70
+     },
+     {
+     "name": "Bourbon",
+     "type": "Spirit",
+     "strength": 45
+     },
+     {
+     "name": "Brandy",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Gin",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Pisco",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Rum (Aged)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Rum (Dark)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Rum (Gold)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Rum (White)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Tequila (Any)",
+     "type": "Spirit",
+     "strength": 38
+     },
+     {
+     "name": "Tequila (Gold)",
+     "type": "Spirit",
+     "strength": 38
+     },
+     {
+     "name": "Tequila (Silver)",
+     "type": "Spirit",
+     "strength": 38
+     },
+     {
+     "name": "Vodka",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Whiskey (Irish)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Whisky (Scotch)",
+     "type": "Spirit",
+     "strength": 40
+     },
+     {
+     "name": "Champagne",
+     "type": "Wine",
+     "strength": 12
+     },
+     {
+     "name": "Red Wine",
+     "type": "Wine",
+     "strength": 12
+     },
+     {
+     "name": "White Wine",
+     "type": "Wine",
+     "strength": 12
+     }
+]}

@@ -14,6 +14,13 @@
 		FA2FC80E1DFD9BBB00B6968C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC80C1DFD9BBB00B6968C /* LaunchScreen.storyboard */; };
 		FA2FC8161DFDA55500B6968C /* CocktailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8151DFDA55500B6968C /* CocktailTableViewController.swift */; };
 		FA2FC8181DFDAB6100B6968C /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8171DFDAB6100B6968C /* CocktailTableViewCell.swift */; };
+		FA2FC81F1DFEEDCD00B6968C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC81E1DFEEDCD00B6968C /* CoreDataStack.swift */; };
+		FA2FC83B1E0009F600B6968C /* amount.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC83A1E0009F600B6968C /* amount.json */; };
+		FA2FC83D1E00433A00B6968C /* glass.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC83C1E00433A00B6968C /* glass.json */; };
+		FA2FC83F1E0049DA00B6968C /* alcohol.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC83E1E0049DA00B6968C /* alcohol.json */; };
+		FA2FC8411E004A7500B6968C /* nonalcohol.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8401E004A7500B6968C /* nonalcohol.json */; };
+		FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8431E004E1200B6968C /* dataTypes.swift */; };
+		FA2FC8461E004EAB00B6968C /* cocktail.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8451E004EAB00B6968C /* cocktail.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		FA2FC80F1DFD9BBB00B6968C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2FC8151DFDA55500B6968C /* CocktailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewController.swift; sourceTree = "<group>"; };
 		FA2FC8171DFDAB6100B6968C /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
+		FA2FC81E1DFEEDCD00B6968C /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FA2FC83A1E0009F600B6968C /* amount.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amount.json; sourceTree = "<group>"; };
+		FA2FC83C1E00433A00B6968C /* glass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glass.json; sourceTree = "<group>"; };
+		FA2FC83E1E0049DA00B6968C /* alcohol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = alcohol.json; sourceTree = "<group>"; };
+		FA2FC8401E004A7500B6968C /* nonalcohol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nonalcohol.json; sourceTree = "<group>"; };
+		FA2FC8431E004E1200B6968C /* dataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTypes.swift; sourceTree = "<group>"; };
+		FA2FC8451E004EAB00B6968C /* cocktail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cocktail.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +72,17 @@
 		FA2FC7FF1DFD9BBB00B6968C /* Mix A Drink */ = {
 			isa = PBXGroup;
 			children = (
+				FA2FC8421E004DFD00B6968C /* Helper */,
 				FA2FC81B1DFDABE700B6968C /* Model */,
 				FA2FC8191DFDABA600B6968C /* Views */,
 				FA2FC81A1DFDABB200B6968C /* View Controllers */,
 				FA2FC8001DFD9BBB00B6968C /* AppDelegate.swift */,
+				FA2FC81E1DFEEDCD00B6968C /* CoreDataStack.swift */,
 				FA2FC8041DFD9BBB00B6968C /* Main.storyboard */,
 				FA2FC80A1DFD9BBB00B6968C /* Assets.xcassets */,
 				FA2FC80C1DFD9BBB00B6968C /* LaunchScreen.storyboard */,
 				FA2FC80F1DFD9BBB00B6968C /* Info.plist */,
+				FA2FC8341DFF15AE00B6968C /* Images */,
 			);
 			path = "Mix A Drink";
 			sourceTree = "<group>";
@@ -90,8 +107,28 @@
 			isa = PBXGroup;
 			children = (
 				FA2FC8071DFD9BBB00B6968C /* Mix_A_Drink.xcdatamodeld */,
+				FA2FC8451E004EAB00B6968C /* cocktail.json */,
+				FA2FC83C1E00433A00B6968C /* glass.json */,
+				FA2FC83A1E0009F600B6968C /* amount.json */,
+				FA2FC8401E004A7500B6968C /* nonalcohol.json */,
+				FA2FC83E1E0049DA00B6968C /* alcohol.json */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FA2FC8341DFF15AE00B6968C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FA2FC8421E004DFD00B6968C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FA2FC8431E004E1200B6968C /* dataTypes.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +192,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2FC80E1DFD9BBB00B6968C /* LaunchScreen.storyboard in Resources */,
+				FA2FC83F1E0049DA00B6968C /* alcohol.json in Resources */,
 				FA2FC80B1DFD9BBB00B6968C /* Assets.xcassets in Resources */,
+				FA2FC83D1E00433A00B6968C /* glass.json in Resources */,
+				FA2FC8411E004A7500B6968C /* nonalcohol.json in Resources */,
+				FA2FC83B1E0009F600B6968C /* amount.json in Resources */,
 				FA2FC8061DFD9BBB00B6968C /* Main.storyboard in Resources */,
+				FA2FC8461E004EAB00B6968C /* cocktail.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2FC81F1DFEEDCD00B6968C /* CoreDataStack.swift in Sources */,
 				FA2FC8091DFD9BBB00B6968C /* Mix_A_Drink.xcdatamodeld in Sources */,
 				FA2FC8161DFDA55500B6968C /* CocktailTableViewController.swift in Sources */,
+				FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */,
 				FA2FC8011DFD9BBB00B6968C /* AppDelegate.swift in Sources */,
 				FA2FC8181DFDAB6100B6968C /* CocktailTableViewCell.swift in Sources */,
 			);

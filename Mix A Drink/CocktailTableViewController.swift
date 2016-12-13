@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class CocktailTableViewController: UITableViewController {
 
+    weak var managedObjectContext: NSManagedObjectContext?
+    var glasses = [Glass]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +35,25 @@ class CocktailTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return glasses.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath) as! CocktailTableViewCell
 
-        // Configure the cell...
+        let currentGlass = glasses[indexPath.row]
+        
+        cell.configureCell(glass: currentGlass)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -81,6 +89,19 @@ class CocktailTableViewController: UITableViewController {
         return true
     }
     */
+    
+    // MARK: - Load data function
+    
+    func loadData() {
+        let request: NSFetchRequest<Glass> = Glass.fetchRequest()
+        
+        do {
+            glasses = try managedObjectContext!.fetch(request)
+        } catch {
+            fatalError("Failed to load the data")
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -13,10 +13,21 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var coreData = CoreDataStack()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let processedTypes:[DataType] = [.Cocktail, .Alcohol, .NonAlcohol, .Amount, .Glass]
+        
+        //Delete all records in the DB
+        deleteRecords(forEntities: processedTypes)
+            
+        //Check for the records needed to be uploaded
+        checkDataStore(forEntities: processedTypes)
+        
+        let rootVC = self.window?.rootViewController as! CocktailTableViewController
+        rootVC.managedObjectContext = coreData.persistentContainer.viewContext
+        
         return true
     }
 
@@ -41,53 +52,123 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        coreData.saveContext()
     }
-
-    // MARK: - Core Data stack
-
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "Mix_A_Drink")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+    
+    func checkDataStore(forEntities entities: [DataType]) {
+        let context = coreData.persistentContainer.viewContext
+        
+        for entity in entities {
+            var request:NSFetchRequest<NSFetchRequestResult>
+            switch entity {
+            case .Cocktail:
+                request = Cocktail.fetchRequest()
+            case .Alcohol:
+                request = Alcohol.fetchRequest()
+            case .NonAlcohol:
+                request = NonAlcohol.fetchRequest()
+            case .Glass:
+                request = Glass.fetchRequest()
+            case .Amount:
+                request = Amount.fetchRequest()
             }
-        })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
+            
             do {
-                try context.save()
+                let objectsCount = try context.count(for: request)
+                if objectsCount == 0 {
+                    print("No records in \(entity.rawValue) entity")
+                    uploadData(forEntity: entity)
+                }
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                fatalError("Failed to count \(entity.rawValue) records!")
             }
         }
     }
-
+    
+    func uploadData(forEntity entity: DataType) {
+        let context = coreData.persistentContainer.viewContext
+        
+        let url = Bundle.main.url(forResource: entity.rawValue, withExtension: "json")!
+        
+        let data = try? Data(contentsOf: url)
+        
+        do {
+            let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+            
+            let jsonArray = jsonResult.value(forKey: entity.rawValue) as! NSArray
+            
+            print("Proccessing \(entity.rawValue) json")
+            
+            for json in jsonArray {
+                let objectData = json as! [String : AnyObject]
+                
+                guard let objectName = objectData["name"] as? String else {
+                    return
+                }
+                
+                let objectImage = UIImage(named: objectName)
+                
+                switch entity {
+                case .Cocktail:
+                    print("Proccessing object \(objectName) of \(entity.rawValue) type")
+                    let cocktail = Cocktail(context: context)
+                    
+                    cocktail.name = objectName
+                case .Alcohol:
+                    print("Proccessing object \(objectName) of \(entity.rawValue) type")
+                    
+                    let alcohol = Alcohol(context: context)
+                    alcohol.name = objectName
+                case .NonAlcohol:
+                    print("Proccessing object \(objectName) of \(entity.rawValue) type")
+                    
+                    let nonAlcohol = NonAlcohol(context: context)
+                    nonAlcohol.name = objectName
+                case .Glass:
+                    print("Proccessing object \(objectName) of \(entity.rawValue) type")
+                    let glass = Glass(context: context)
+                    
+                    glass.name = objectName
+                    glass.image = NSData.init(data: UIImagePNGRepresentation(objectImage!)!)
+                case .Amount:
+                    print("Proccessing object \(objectName) of \(entity.rawValue) type")
+                    
+                    let amount = Amount(context: context)
+                    amount.name = objectName
+                }
+            }
+        } catch {
+            fatalError("Failed to upload \(entity.rawValue) data")
+        }
+    }
+    
+    func deleteRecords(forEntities entities: [DataType]) {
+        let context = coreData.persistentContainer.viewContext
+        
+        for entity in entities {
+            var request:NSFetchRequest<NSFetchRequestResult>
+            switch entity {
+            case .Cocktail:
+                request = Cocktail.fetchRequest()
+            case .Alcohol:
+                request = Alcohol.fetchRequest()
+            case .NonAlcohol:
+                request = NonAlcohol.fetchRequest()
+            case .Glass:
+                request = Glass.fetchRequest()
+            case .Amount:
+                request = Amount.fetchRequest()
+            }
+            
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+            
+            do {
+                try context.execute(deleteRequest)
+            } catch {
+                fatalError("Failed removing \(entity.rawValue) records!")
+            }
+        }
+        
+    }
 }
 

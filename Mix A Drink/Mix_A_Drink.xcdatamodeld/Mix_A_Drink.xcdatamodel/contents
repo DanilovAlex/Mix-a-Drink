@@ -6,6 +6,7 @@
         <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresAlcohol" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Amount" representedClassName="Amount" syncable="YES" codeGenerationType="class">
+        <attribute name="measure" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="amounts" inverseEntity="Cocktail" syncable="YES"/>
@@ -15,6 +16,7 @@
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="strength" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Amount" inverseName="usedIn" inverseEntity="Amount" syncable="YES"/>
         <relationship name="requiresAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alcohol" inverseName="usedIn" inverseEntity="Alcohol" syncable="YES"/>
         <relationship name="requiresGlass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Glass" inverseName="usedIn" inverseEntity="Glass" syncable="YES"/>
@@ -39,7 +41,7 @@
         <element name="Alcohol" positionX="-117" positionY="-18" width="128" height="88"/>
         <element name="NonAlcohol" positionX="-576" positionY="-1" width="128" height="73"/>
         <element name="Glass" positionX="-119" positionY="-295" width="128" height="88"/>
-        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="163"/>
-        <element name="Amount" positionX="-576" positionY="-297" width="128" height="88"/>
+        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="178"/>
+        <element name="Amount" positionX="-576" positionY="-297" width="128" height="103"/>
     </elements>
 </model>
