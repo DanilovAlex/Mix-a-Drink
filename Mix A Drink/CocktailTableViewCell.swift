@@ -10,8 +10,8 @@ import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var cocktailNameLabel: UILabel!
+    @IBOutlet weak var cocktailImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,11 +24,11 @@ class CocktailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(glass: Glass){
-        nameLabel.text = glass.name
+    func configureCell(cocktail: Cocktail){
+        cocktailNameLabel.text = cocktail.name
         
-        let image = UIImage(data: glass.image! as Data)
-        myImage.image = image
+        let image = UIImage(data: cocktail.image! as Data)
+        cocktailImageView.image = image
     }
 
 }

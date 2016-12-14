@@ -12,7 +12,7 @@ import CoreData
 class CocktailTableViewController: UITableViewController {
 
     weak var managedObjectContext: NSManagedObjectContext?
-    var glasses = [Glass]()
+    var cocktails = [Cocktail]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +40,16 @@ class CocktailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return glasses.count
+        return cocktails.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath) as! CocktailTableViewCell
 
-        let currentGlass = glasses[indexPath.row]
+        let currentCocktail = cocktails[indexPath.row]
         
-        cell.configureCell(glass: currentGlass)
+        cell.configureCell(cocktail: currentCocktail)
 
         return cell
     }
@@ -93,10 +93,10 @@ class CocktailTableViewController: UITableViewController {
     // MARK: - Load data function
     
     func loadData() {
-        let request: NSFetchRequest<Glass> = Glass.fetchRequest()
+        let request: NSFetchRequest<Cocktail> = Cocktail.fetchRequest()
         
         do {
-            glasses = try managedObjectContext!.fetch(request)
+            cocktails = try managedObjectContext!.fetch(request)
         } catch {
             fatalError("Failed to load the data")
         }

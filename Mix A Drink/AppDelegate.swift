@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let processedTypes:[DataType] = [.Cocktail, .Alcohol, .NonAlcohol, .Amount, .Glass]
+        let processedTypes:[DataType] = [.Alcohol, .NonAlcohol, .Amount, .Glass, .Cocktail]
         
         //Delete all records in the DB
         deleteRecords(forEntities: processedTypes)
@@ -25,8 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Check for the records needed to be uploaded
         checkDataStore(forEntities: processedTypes)
         
-        let rootVC = self.window?.rootViewController as! CocktailTableViewController
-        rootVC.managedObjectContext = coreData.persistentContainer.viewContext
+        let tabBarController = self.window?.rootViewController as! UITabBarController
+        
+        let cocktailTableNavigationController = tabBarController.viewControllers?[0] as! UINavigationController
+        let cocktailTableViewController = cocktailTableNavigationController.topViewController as! CocktailTableViewController
+        cocktailTableViewController.managedObjectContext = coreData.persistentContainer.viewContext
         
         return true
     }
@@ -106,37 +109,125 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
                 }
                 
-                let objectImage = UIImage(named: objectName)
+                var objectImage:UIImage
+                
+                if let tryImage = UIImage(named: (entity == .Cocktail ? objectName + ".jpg" : objectName)) {
+                    objectImage = tryImage
+                } else {
+                    objectImage = UIImage(named: "Image Not Found")!
+                }
                 
                 switch entity {
                 case .Cocktail:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     let cocktail = Cocktail(context: context)
                     
+                    guard let instruction = objectData["instruction"] as? String else {
+                        return
+                    }
+                    
+                    guard let color = objectData["color"] as? String else {
+                        return
+                    }
+                    
+                    guard let strength = objectData["strength"] as? String else {
+                        return
+                    }
+                    
+                    let recipeData = cocktail.recipe?.mutableCopy() as! NSMutableSet
+                    
+                    let alcoholIngridients = objectData["alcoholingridients"] as! NSArray
+                    let alcoholAmounts = objectData["alcoholamounts"] as! NSArray
+                    
+                    for (ingridient, amount) in zip(alcoholIngridients, alcoholAmounts) {
+                        let ingridientName = ingridient as! String
+                        let amountName = amount as! String
+                        
+                        let recipeElement = Recipe(context: context)
+                        recipeElement.ingridientName = ingridientName
+                        recipeElement.ingridientAmount = amountName
+                        recipeElement.ingridientType = IngridientType.Alcohol.rawValue
+                        
+                        recipeData.add(recipeElement)
+                        print("Found ingridient \(ingridientName) needed \(amountName)")
+                    }
+                    
+                    let nonalcoholIngridients = objectData["nonalcoholingridients"] as! NSArray
+                    let nonalcoholAmounts = objectData["nonalcoholamounts"] as! NSArray
+                    
+                    for (ingridient, amount) in zip(nonalcoholIngridients, nonalcoholAmounts) {
+                        let ingridientName = ingridient as! String
+                        let amountName = amount as! String
+                        
+                        let recipeElement = Recipe(context: context)
+                        recipeElement.ingridientName = ingridientName
+                        recipeElement.ingridientAmount = amountName
+                        recipeElement.ingridientType = IngridientType.NonAlcohol.rawValue
+                        
+                        recipeData.add(recipeElement)
+                        print("Found ingridient \(ingridientName) needed \(amountName)")
+                    }
+                    cocktail.recipe = recipeData.copy() as? NSSet
                     cocktail.name = objectName
+                    cocktail.instruction = instruction
+                    cocktail.color = color
+                    cocktail.strength = strength
+                    cocktail.image = NSData.init(data: UIImageJPEGRepresentation(objectImage, 1)!)
                 case .Alcohol:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     
+                    guard let type = objectData["type"] as? String else {
+                        return
+                    }
+                    
+                    guard let strength = objectData["strength"] as? Double else {
+                        return
+                    }
+                    
                     let alcohol = Alcohol(context: context)
                     alcohol.name = objectName
+                    alcohol.type = type
+                    alcohol.strength = strength
+                    alcohol.isAvailible = false
+                    alcohol.image = NSData.init(data: UIImagePNGRepresentation(objectImage)!)
                 case .NonAlcohol:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     
+                    guard let type = objectData["type"] as? String else {
+                        return
+                    }
+                    
                     let nonAlcohol = NonAlcohol(context: context)
                     nonAlcohol.name = objectName
+                    nonAlcohol.type = type
+                    nonAlcohol.isAvailible = false
+                    nonAlcohol.image = NSData.init(data: UIImagePNGRepresentation(objectImage)!)
                 case .Glass:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     let glass = Glass(context: context)
                     
                     glass.name = objectName
-                    glass.image = NSData.init(data: UIImagePNGRepresentation(objectImage!)!)
+                    glass.image = NSData.init(data: UIImagePNGRepresentation(objectImage)!)
                 case .Amount:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     
+                    guard let measure = objectData["measure"] as? String else {
+                        return
+                    }
+                    
+                    guard let value = objectData["value"] as? Double else {
+                        return
+                    }
+                    
                     let amount = Amount(context: context)
                     amount.name = objectName
+                    amount.measure = measure
+                    amount.value = value
                 }
             }
+            
+            coreData.saveContext()
+            
         } catch {
             fatalError("Failed to upload \(entity.rawValue) data")
         }

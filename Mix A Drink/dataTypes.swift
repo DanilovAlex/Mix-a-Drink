@@ -15,3 +15,8 @@ enum DataType: String {
     case Amount = "amount"
     case Glass = "glass"
 }
+
+enum IngridientType: String {
+    case Alcohol = "Alcohol"
+    case NonAlcohol = "Non-Alcohol"
+}

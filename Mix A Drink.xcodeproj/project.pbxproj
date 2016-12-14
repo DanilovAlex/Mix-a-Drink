@@ -21,6 +21,16 @@
 		FA2FC8411E004A7500B6968C /* nonalcohol.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8401E004A7500B6968C /* nonalcohol.json */; };
 		FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8431E004E1200B6968C /* dataTypes.swift */; };
 		FA2FC8461E004EAB00B6968C /* cocktail.json in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8451E004EAB00B6968C /* cocktail.json */; };
+		FA2FC8501E013EFE00B6968C /* Aperol Spritz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8471E013EFE00B6968C /* Aperol Spritz.jpg */; };
+		FA2FC8511E013EFE00B6968C /* Bloody Mary.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8481E013EFE00B6968C /* Bloody Mary.jpg */; };
+		FA2FC8521E013EFE00B6968C /* Cosmopolitan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8491E013EFE00B6968C /* Cosmopolitan.jpg */; };
+		FA2FC8531E013EFE00B6968C /* Dry Martini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84A1E013EFE00B6968C /* Dry Martini.jpg */; };
+		FA2FC8541E013EFE00B6968C /* Gin & Tonic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84B1E013EFE00B6968C /* Gin & Tonic.jpg */; };
+		FA2FC8551E013EFE00B6968C /* Margarita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84C1E013EFE00B6968C /* Margarita.jpg */; };
+		FA2FC8561E013EFE00B6968C /* Mojito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84D1E013EFE00B6968C /* Mojito.jpg */; };
+		FA2FC8571E013EFE00B6968C /* Negroni.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84E1E013EFE00B6968C /* Negroni.jpg */; };
+		FA2FC8581E013EFE00B6968C /* Planter's Punch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC84F1E013EFE00B6968C /* Planter's Punch.jpg */; };
+		FA2FC85A1E0140EB00B6968C /* Screwdriver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8591E0140EB00B6968C /* Screwdriver.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +50,16 @@
 		FA2FC8401E004A7500B6968C /* nonalcohol.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nonalcohol.json; sourceTree = "<group>"; };
 		FA2FC8431E004E1200B6968C /* dataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTypes.swift; sourceTree = "<group>"; };
 		FA2FC8451E004EAB00B6968C /* cocktail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cocktail.json; sourceTree = "<group>"; };
+		FA2FC8471E013EFE00B6968C /* Aperol Spritz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Aperol Spritz.jpg"; sourceTree = "<group>"; };
+		FA2FC8481E013EFE00B6968C /* Bloody Mary.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bloody Mary.jpg"; sourceTree = "<group>"; };
+		FA2FC8491E013EFE00B6968C /* Cosmopolitan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cosmopolitan.jpg; sourceTree = "<group>"; };
+		FA2FC84A1E013EFE00B6968C /* Dry Martini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dry Martini.jpg"; sourceTree = "<group>"; };
+		FA2FC84B1E013EFE00B6968C /* Gin & Tonic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Gin & Tonic.jpg"; sourceTree = "<group>"; };
+		FA2FC84C1E013EFE00B6968C /* Margarita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Margarita.jpg; sourceTree = "<group>"; };
+		FA2FC84D1E013EFE00B6968C /* Mojito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mojito.jpg; sourceTree = "<group>"; };
+		FA2FC84E1E013EFE00B6968C /* Negroni.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Negroni.jpg; sourceTree = "<group>"; };
+		FA2FC84F1E013EFE00B6968C /* Planter's Punch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Planter's Punch.jpg"; sourceTree = "<group>"; };
+		FA2FC8591E0140EB00B6968C /* Screwdriver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Screwdriver.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +139,16 @@
 		FA2FC8341DFF15AE00B6968C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA2FC8471E013EFE00B6968C /* Aperol Spritz.jpg */,
+				FA2FC8481E013EFE00B6968C /* Bloody Mary.jpg */,
+				FA2FC8491E013EFE00B6968C /* Cosmopolitan.jpg */,
+				FA2FC84A1E013EFE00B6968C /* Dry Martini.jpg */,
+				FA2FC84B1E013EFE00B6968C /* Gin & Tonic.jpg */,
+				FA2FC84C1E013EFE00B6968C /* Margarita.jpg */,
+				FA2FC84D1E013EFE00B6968C /* Mojito.jpg */,
+				FA2FC8591E0140EB00B6968C /* Screwdriver.jpg */,
+				FA2FC84E1E013EFE00B6968C /* Negroni.jpg */,
+				FA2FC84F1E013EFE00B6968C /* Planter's Punch.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -191,12 +221,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2FC85A1E0140EB00B6968C /* Screwdriver.jpg in Resources */,
+				FA2FC8581E013EFE00B6968C /* Planter's Punch.jpg in Resources */,
 				FA2FC80E1DFD9BBB00B6968C /* LaunchScreen.storyboard in Resources */,
+				FA2FC8561E013EFE00B6968C /* Mojito.jpg in Resources */,
 				FA2FC83F1E0049DA00B6968C /* alcohol.json in Resources */,
+				FA2FC8511E013EFE00B6968C /* Bloody Mary.jpg in Resources */,
 				FA2FC80B1DFD9BBB00B6968C /* Assets.xcassets in Resources */,
+				FA2FC8501E013EFE00B6968C /* Aperol Spritz.jpg in Resources */,
+				FA2FC8521E013EFE00B6968C /* Cosmopolitan.jpg in Resources */,
 				FA2FC83D1E00433A00B6968C /* glass.json in Resources */,
+				FA2FC8541E013EFE00B6968C /* Gin & Tonic.jpg in Resources */,
+				FA2FC8551E013EFE00B6968C /* Margarita.jpg in Resources */,
 				FA2FC8411E004A7500B6968C /* nonalcohol.json in Resources */,
 				FA2FC83B1E0009F600B6968C /* amount.json in Resources */,
+				FA2FC8571E013EFE00B6968C /* Negroni.jpg in Resources */,
+				FA2FC8531E013EFE00B6968C /* Dry Martini.jpg in Resources */,
 				FA2FC8061DFD9BBB00B6968C /* Main.storyboard in Resources */,
 				FA2FC8461E004EAB00B6968C /* cocktail.json in Resources */,
 			);

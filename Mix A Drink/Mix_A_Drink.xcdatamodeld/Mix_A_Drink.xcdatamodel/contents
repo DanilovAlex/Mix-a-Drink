@@ -18,6 +18,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Amount" inverseName="usedIn" inverseEntity="Amount" syncable="YES"/>
+        <relationship name="recipe" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Recipe" inverseName="cocktail" inverseEntity="Recipe" syncable="YES"/>
         <relationship name="requiresAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alcohol" inverseName="usedIn" inverseEntity="Alcohol" syncable="YES"/>
         <relationship name="requiresGlass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Glass" inverseName="usedIn" inverseEntity="Glass" syncable="YES"/>
         <relationship name="requiresNonAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonAlcohol" inverseName="usedIn" inverseEntity="NonAlcohol" syncable="YES"/>
@@ -36,12 +37,19 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresNonAlcohol" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="ingridientAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ingridientName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ingridientType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cocktail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="recipe" inverseEntity="Cocktail" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Ingridient" positionX="-326" positionY="216" width="128" height="90"/>
         <element name="Alcohol" positionX="-117" positionY="-18" width="128" height="88"/>
         <element name="NonAlcohol" positionX="-576" positionY="-1" width="128" height="73"/>
-        <element name="Glass" positionX="-119" positionY="-295" width="128" height="88"/>
-        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="178"/>
+        <element name="Glass" positionX="54" positionY="-124" width="128" height="88"/>
+        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="193"/>
         <element name="Amount" positionX="-576" positionY="-297" width="128" height="103"/>
+        <element name="Recipe" positionX="-119" positionY="-391" width="128" height="103"/>
     </elements>
 </model>
