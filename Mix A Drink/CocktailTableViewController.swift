@@ -11,6 +11,7 @@ import CoreData
 
 class CocktailTableViewController: UITableViewController {
 
+    @IBOutlet var cocktailsTableView: UITableView!
     weak var managedObjectContext: NSManagedObjectContext?
     var cocktails = [Cocktail]()
     
@@ -103,14 +104,21 @@ class CocktailTableViewController: UITableViewController {
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cocktailDetail" {
+            let destinationVC = segue.destination as! CocktailDetailViewController
+            let selectedIndexPath = cocktailsTableView.indexPathForSelectedRow!
+            
+            destinationVC.cocktail = cocktails[selectedIndexPath.row]
+            destinationVC.managedObjectContext = managedObjectContext
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

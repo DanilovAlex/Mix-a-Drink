@@ -134,7 +134,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         return
                     }
                     
-                    let recipeData = cocktail.recipe?.mutableCopy() as! NSMutableSet
+                    guard let glass = objectData["glass"] as? String else {
+                        return
+                    }
+                    
+                    let recipeAlcoholPart = cocktail.recipeAlcohol?.mutableCopy() as! NSMutableSet
                     
                     let alcoholIngridients = objectData["alcoholingridients"] as! NSArray
                     let alcoholAmounts = objectData["alcoholamounts"] as! NSArray
@@ -143,14 +147,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         let ingridientName = ingridient as! String
                         let amountName = amount as! String
                         
-                        let recipeElement = Recipe(context: context)
-                        recipeElement.ingridientName = ingridientName
-                        recipeElement.ingridientAmount = amountName
-                        recipeElement.ingridientType = IngridientType.Alcohol.rawValue
+                        let alcoholPart = AlcoholRecipePart(context: context)
+                        alcoholPart.ingridientName = ingridientName
+                        alcoholPart.ingridientAmount = amountName
+                        alcoholPart.ingridientType = IngridientType.Alcohol.rawValue
                         
-                        recipeData.add(recipeElement)
+                        recipeAlcoholPart.add(alcoholPart)
                         print("Found ingridient \(ingridientName) needed \(amountName)")
                     }
+                    
+                    let recipeNonAlcoholPart = cocktail.recipeNonAlcohol?.mutableCopy() as! NSMutableSet
                     
                     let nonalcoholIngridients = objectData["nonalcoholingridients"] as! NSArray
                     let nonalcoholAmounts = objectData["nonalcoholamounts"] as! NSArray
@@ -159,19 +165,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         let ingridientName = ingridient as! String
                         let amountName = amount as! String
                         
-                        let recipeElement = Recipe(context: context)
-                        recipeElement.ingridientName = ingridientName
-                        recipeElement.ingridientAmount = amountName
-                        recipeElement.ingridientType = IngridientType.NonAlcohol.rawValue
+                        let nonAlcoholPart = NonAlcoholRecipePart(context: context)
+                        nonAlcoholPart.ingridientName = ingridientName
+                        nonAlcoholPart.ingridientAmount = amountName
+                        nonAlcoholPart.ingridientType = IngridientType.NonAlcohol.rawValue
                         
-                        recipeData.add(recipeElement)
+                        recipeNonAlcoholPart.add(nonAlcoholPart)
                         print("Found ingridient \(ingridientName) needed \(amountName)")
                     }
-                    cocktail.recipe = recipeData.copy() as? NSSet
+                    cocktail.recipeAlcohol = recipeAlcoholPart.copy() as? NSSet
+                    cocktail.recipeNonAlcohol = recipeNonAlcoholPart.copy() as? NSSet
+ 
                     cocktail.name = objectName
                     cocktail.instruction = instruction
                     cocktail.color = color
                     cocktail.strength = strength
+                    cocktail.glass = glass
                     cocktail.image = NSData.init(data: UIImageJPEGRepresentation(objectImage, 1)!)
                 case .Alcohol:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")

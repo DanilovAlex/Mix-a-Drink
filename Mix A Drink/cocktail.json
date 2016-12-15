@@ -1,170 +1,170 @@
-{"cocktail":[
-    {
-        "name": "Cosmopolitan",
-        "glass": "Cocktail Glass",
-        "strength": "Moderate",
-        "color": "Red",
-        "alcoholingridients": [
-            "Vodka",
-            "Triple Sec"
-        ],
-        "alcoholamounts": [
-            "1 1/2 shots",
-            "1/2 shot"
-        ],
-        "nonalcoholingridients": [
-            "Cranberry Juice",
-            "Lime Juice"
-        ],
-        "nonalcoholamounts": [
-            "1 shot",
-            "1/4 shot"
-        ],
-        "instruction": "SHAKE All ingridients with ice and fine strain into chilled glass"
-    },
-    {
-        "name": "Mojito",
-        "glass": "Highball Glass",
-        "strength": "Weak",
-        "color": "Clear",
-        "alcoholingridients": [
-            "Rum (White)"
-        ],
-        "alcoholamounts": [
-            "2 shots"
-        ],
-        "nonalcoholingridients": [
-            "Mint leaves",
-            "Lime Juice",
-            "Sugar Syrup",
-            "Soda"
-        ],
-        "nonalcoholamounts": [
-            "12 fresh",
-            "3/4 shot",
-            "1/2 shot",
-            "top up"
-        ],
-        "instruction": "Lightly MUDDLE mint in base of glass. Add rum, lime, juice and sugar. Half fill glass with crushed ice and CHURN (stir) with bar spoon. Fill glass with more crushed ice and CHURN some more. Top with soda and stir."
-    },
-    {
-        "name": "Screwdriver",
-        "glass": "Highball Glass",
-        "strength": "Moderate",
-        "color": "Yellow",
-        "alcoholingridients": [
-            "Vodka"
-        ],
-        "alcoholamounts": [
-            "2 1/2 shots"
-        ],
-        "nonalcoholingridients": [
-            "Orange Juice"
-        ],
-        "nonalcoholamounts": [
-            "top up"
-        ],
-        "instruction": "POUR vodka into ice-filled glass and TOP with orange juice. Lightly stir."
-    },
-    {
-        "name": "Planter's Punch",
-        "glass": "Highball Glass",
-        "strength": "Weak",
-        "color": "Red",
-        "alcoholingridients": [
-            "Rum (Dark)",
-            "Angostura Bitter"
-        ],
-        "alcoholamounts": [
-            "1 1/2 shots",
-            "3 dash"
-        ],
-        "nonalcoholingridients": [
-            "Lime Juice",
-            "Sugar Syrup",
-            "Mineral Water"
-        ],
-        "nonalcoholamounts": [
-            "1 shot",
-            "1/2 shot",
-            "2 shots"
-        ],
-        "instruction": "SHAKE All ingridients with ice and fine strain into chilled glass"
-    },
-    {
-        "name": "Aperol Spritz",
-        "glass": "Wine Glass",
-        "strength": "Moderate",
-        "color": "Orange",
-        "alcoholingridients": [
-            "Champagne",
-            "Aperol"
-        ],
-        "alcoholamounts": [
-            "3 shots",
-            "2 shots"
-        ],
-        "nonalcoholingridients": [
-            "Soda"
-        ],
-        "nonalcoholamounts": [
-            "top up"
-        ],
-        "instruction": "POUR ingridients into ice-filled glass in the following order and stir lightly"
-    },
-    {
-        "name": "Dry Martini",
-        "glass": "Cocktail Glass",
-        "strength": "Strong",
-        "color": "Clear",
-        "alcoholingridients": [
-            "Gin",
-            "Maritni Extra Dry"
-        ],
-        "alcoholamounts": [
-            "2 1/4 shots",
-            "3/4 shot"
-        ],
-        "nonalcoholingridients": [],
-        "nonalcoholamounts": [],
-        "instruction": "STIR All ingridients with ice and strain into chilled glass"
-    },
-    {
-        "name": "Negroni",
-        "glass": "Tumbler Glass",
-        "strength": "Moderate",
-        "color": "Red",
-        "alcoholingridients": [
-            "Gin",
-            "Campari",
-            "Martini Rosso"
-        ],
-        "alcoholamounts": [
-            "1 1/2 shots",
-            "1 1/2 shots",
-            "1 1/2 shots"
-        ],
-        "nonalcoholingridients": [],
-        "nonalcoholamounts": [],
-        "instruction": "POUR all ingridients into ice-filled glass and STIR"
-    },
-    {
-        "name": "Gin & Tonic",
-        "glass": "Highball Glass",
-        "strength": "Weak",
-        "color": "Clear",
-        "alcoholingridients": [
-            "Gin"
-        ],
-        "alcoholamounts": [
-            "2 shots"
-        ],
-        "nonalcoholingridients": [
-            "Tonic Water"
-        ],
-        "nonalcoholamounts": [
-            "top up"
-        ],
-        "instruction": "POUR all ingridients into ice-filled glass and STIR"
-    }
+{"cocktail": [
+  {
+  "name": "Cosmopolitan",
+  "glass": "Cocktail Glass",
+  "strength": "Moderate",
+  "color": "Red",
+  "alcoholingridients": [
+                         "Vodka",
+                         "Triple Sec"
+                         ],
+  "alcoholamounts": [
+                     "1 1/2 shots",
+                     "1/2 shot"
+                     ],
+  "nonalcoholingridients": [
+                            "Cranberry Juice",
+                            "Lime Juice"
+                            ],
+  "nonalcoholamounts": [
+                        "1 shot",
+                        "1/4 shot"
+                        ],
+  "instruction": "SHAKE All ingridients with ice and fine strain into chilled glass"
+  },
+  {
+  "name": "Mojito",
+  "glass": "Highball Glass",
+  "strength": "Weak",
+  "color": "Clear",
+  "alcoholingridients": [
+                         "Rum (White)"
+                         ],
+  "alcoholamounts": [
+                     "2 shots"
+                     ],
+  "nonalcoholingridients": [
+                            "Mint leaves",
+                            "Lime Juice",
+                            "Sugar Syrup",
+                            "Soda"
+                            ],
+  "nonalcoholamounts": [
+                        "12 fresh",
+                        "3/4 shot",
+                        "1/2 shot",
+                        "top up"
+                        ],
+  "instruction": "Lightly MUDDLE mint in base of glass. Add rum, lime, juice and sugar. Half fill glass with crushed ice and CHURN (stir) with bar spoon. Fill glass with more crushed ice and CHURN some more. Top with soda and stir."
+  },
+  {
+  "name": "Screwdriver",
+  "glass": "Highball Glass",
+  "strength": "Moderate",
+  "color": "Yellow",
+  "alcoholingridients": [
+                         "Vodka"
+                         ],
+  "alcoholamounts": [
+                     "2 1/2 shots"
+                     ],
+  "nonalcoholingridients": [
+                            "Orange Juice"
+                            ],
+  "nonalcoholamounts": [
+                        "top up"
+                        ],
+  "instruction": "POUR vodka into ice-filled glass and TOP with orange juice. Lightly stir."
+  },
+  {
+  "name": "Planter's Punch",
+  "glass": "Highball Glass",
+  "strength": "Weak",
+  "color": "Red",
+  "alcoholingridients": [
+                         "Rum (Dark)",
+                         "Angostura Bitter"
+                         ],
+  "alcoholamounts": [
+                     "1 1/2 shots",
+                     "3 dash"
+                     ],
+  "nonalcoholingridients": [
+                            "Lime Juice",
+                            "Sugar Syrup",
+                            "Mineral Water"
+                            ],
+  "nonalcoholamounts": [
+                        "1 shot",
+                        "1/2 shot",
+                        "2 shots"
+                        ],
+  "instruction": "SHAKE All ingridients with ice and fine strain into chilled glass"
+  },
+  {
+  "name": "Aperol Spritz",
+  "glass": "Wine Glass",
+  "strength": "Moderate",
+  "color": "Orange",
+  "alcoholingridients": [
+                         "Champagne",
+                         "Aperol"
+                         ],
+  "alcoholamounts": [
+                     "3 shots",
+                     "2 shots"
+                     ],
+  "nonalcoholingridients": [
+                            "Soda"
+                            ],
+  "nonalcoholamounts": [
+                        "top up"
+                        ],
+  "instruction": "POUR ingridients into ice-filled glass in the following order and stir lightly"
+  },
+  {
+  "name": "Dry Martini",
+  "glass": "Cocktail Glass",
+  "strength": "Strong",
+  "color": "Clear",
+  "alcoholingridients": [
+                         "Gin",
+                         "Martini Extra Dry"
+                         ],
+  "alcoholamounts": [
+                     "2 1/4 shots",
+                     "3/4 shot"
+                     ],
+  "nonalcoholingridients": [],
+  "nonalcoholamounts": [],
+  "instruction": "STIR All ingridients with ice and strain into chilled glass"
+  },
+  {
+  "name": "Negroni",
+  "glass": "Tumbler Glass",
+  "strength": "Moderate",
+  "color": "Red",
+  "alcoholingridients": [
+                         "Gin",
+                         "Campari",
+                         "Martini Rosso"
+                         ],
+  "alcoholamounts": [
+                     "1 1/2 shots",
+                     "1 1/2 shots",
+                     "1 1/2 shots"
+                     ],
+  "nonalcoholingridients": [],
+  "nonalcoholamounts": [],
+  "instruction": "POUR all ingridients into ice-filled glass and STIR"
+  },
+  {
+  "name": "Gin & Tonic",
+  "glass": "Highball Glass",
+  "strength": "Weak",
+  "color": "Clear",
+  "alcoholingridients": [
+                         "Gin"
+                         ],
+  "alcoholamounts": [
+                     "2 shots"
+                     ],
+  "nonalcoholingridients": [
+                            "Tonic Water"
+                            ],
+  "nonalcoholamounts": [
+                        "top up"
+                        ],
+  "instruction": "POUR all ingridients into ice-filled glass and STIR"
+  }
 ]}

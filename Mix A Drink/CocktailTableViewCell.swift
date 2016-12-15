@@ -12,6 +12,9 @@ class CocktailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cocktailNameLabel: UILabel!
     @IBOutlet weak var cocktailImageView: UIImageView!
+    @IBOutlet weak var strengthImageView: UIImageView!
+    @IBOutlet weak var colorImageView: UIImageView!
+    @IBOutlet weak var glassImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +30,17 @@ class CocktailTableViewCell: UITableViewCell {
     func configureCell(cocktail: Cocktail){
         cocktailNameLabel.text = cocktail.name
         
-        let image = UIImage(data: cocktail.image! as Data)
-        cocktailImageView.image = image
+        let cocktailImage = UIImage(data: cocktail.image! as Data)
+        cocktailImageView.image = cocktailImage
+        
+        let strengthImage = UIImage(named: cocktail.strength!)
+        strengthImageView.image = strengthImage
+        
+        let colorImage = UIImage(named: cocktail.color!)
+        colorImageView.image = colorImage
+        
+        let glassImage = UIImage(named: cocktail.glass!)
+        glassImageView.image = glassImage
     }
 
 }
