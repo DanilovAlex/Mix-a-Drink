@@ -14,7 +14,7 @@ class RecipeIngridientCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ingridientNameLabel: UILabel!
     
     public func configureCell (recipeDetail: Recipe){
-        ingridientAmountLabel.text = recipeDetail.ingridientAmount
+        ingridientAmountLabel.attributedText = recipeDetail.ingridientAmount?.toAmountString
         
         ingridientNameLabel.text = recipeDetail.ingridientName
         

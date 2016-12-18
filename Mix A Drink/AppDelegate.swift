@@ -27,9 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = self.window?.rootViewController as! UITabBarController
         
-        let cocktailTableNavigationController = tabBarController.viewControllers?[0] as! UINavigationController
-        let cocktailTableViewController = cocktailTableNavigationController.topViewController as! CocktailTableViewController
+        //First tab - Cocktails
+        
+        let cocktailNavigationController = tabBarController.viewControllers?[0] as! UINavigationController
+        let categorySelectionTableViewController = cocktailNavigationController.topViewController as! CategorySelectionTableViewController
+        categorySelectionTableViewController.managedObjectContext = coreData.persistentContainer.viewContext
+        
+        //Second tab - My bar
+        let ingridientCollectionViewController = tabBarController.viewControllers?[1] as! IngridientsCollectionViewController
+        ingridientCollectionViewController.managedObjectContext = coreData.persistentContainer.viewContext
+        
+        //Third tab - Favorites
+        
+        let favoritesNavigationController = tabBarController.viewControllers?[2] as! UINavigationController
+        let cocktailTableViewController = favoritesNavigationController.topViewController as! CocktailTableViewController
         cocktailTableViewController.managedObjectContext = coreData.persistentContainer.viewContext
+
         
         return true
     }

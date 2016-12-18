@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alcohol" representedClassName="Alcohol" parentEntity="Ingridient" syncable="YES" codeGenerationType="class">
         <attribute name="strength" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +20,8 @@
         <attribute name="glass" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Amount" inverseName="usedIn" inverseEntity="Amount" syncable="YES"/>
         <relationship name="recipeAlcohol" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AlcoholRecipePart" inverseName="cocktail" inverseEntity="AlcoholRecipePart" syncable="YES"/>
@@ -36,7 +37,7 @@
     </entity>
     <entity name="Ingridient" representedClassName="Ingridient" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="isAvailible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isAvailible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="NonAlcohol" representedClassName="NonAlcohol" parentEntity="Ingridient" syncable="YES" codeGenerationType="class">
@@ -53,13 +54,13 @@
     </entity>
     <elements>
         <element name="Alcohol" positionX="-65" positionY="216" width="128" height="88"/>
+        <element name="AlcoholRecipePart" positionX="108" positionY="-201" width="128" height="73"/>
         <element name="Amount" positionX="-497" positionY="-148" width="128" height="103"/>
-        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="225"/>
+        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="238"/>
         <element name="Glass" positionX="108" positionY="-18" width="128" height="88"/>
         <element name="Ingridient" positionX="-317" positionY="414" width="128" height="90"/>
         <element name="NonAlcohol" positionX="-533" positionY="224" width="128" height="73"/>
-        <element name="Recipe" positionX="306" positionY="-156" width="128" height="75"/>
-        <element name="AlcoholRecipePart" positionX="108" positionY="-201" width="128" height="73"/>
         <element name="NonAlcoholRecipePart" positionX="106" positionY="-120" width="128" height="73"/>
+        <element name="Recipe" positionX="306" positionY="-156" width="128" height="75"/>
     </elements>
 </model>

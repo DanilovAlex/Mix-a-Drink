@@ -18,5 +18,5 @@ enum DataType: String {
 
 enum IngridientType: String {
     case Alcohol = "Alcohol"
-    case NonAlcohol = "Non-Alcohol"
+    case NonAlcohol = "NonAlcohol"
 }

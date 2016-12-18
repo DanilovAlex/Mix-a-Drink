@@ -104,7 +104,6 @@ class CocktailTableViewController: UITableViewController {
         
     }
 
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -116,9 +115,5 @@ class CocktailTableViewController: UITableViewController {
             destinationVC.cocktail = cocktails[selectedIndexPath.row]
             destinationVC.managedObjectContext = managedObjectContext
         }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-
-
 }

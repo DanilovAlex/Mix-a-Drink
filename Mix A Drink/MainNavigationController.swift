@@ -14,6 +14,7 @@ class MainNavigationController: UINavigationController {
         super.viewDidLoad()
         
         self.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Courgette-Regular", size: 20)!]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont(name: "Courgette-Regular", size: 20)!], for: UIControlState.normal)
         // Do any additional setup after loading the view.
     }
 
