@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class CocktailDetailViewController: UIViewController, UICollectionViewDataSource {
-    var cocktail: Cocktail?
+    var cocktail: Cocktail!
     var alcoholIngridients: [AlcoholRecipePart] = []
     var nonAlcoholIngridients: [NonAlcoholRecipePart] = []
     weak var managedObjectContext: NSManagedObjectContext?
@@ -23,30 +23,53 @@ class CocktailDetailViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak var glassImageView: UIImageView!
     @IBOutlet weak var alcoholRecipeDetailsCollectionView: UICollectionView!
     @IBOutlet weak var nonalcoholRecipeDetailsCollectionView: UICollectionView!
-    
+    @IBOutlet weak var favoritesButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cocktailNameLabel.text = cocktail?.name
+        cocktailNameLabel.text = cocktail.name
 
-        let cocktailImage = UIImage(data: cocktail?.image! as! Data)
+        let cocktailImage = UIImage(data: cocktail.image! as Data)
         cocktailImageView.image = cocktailImage
         
-        let strengthImage = UIImage(named: (cocktail?.strength)!)
+        let strengthImage = UIImage(named: (cocktail.strength)!)
         strengthImageView.image = strengthImage
         
-        let colorImage = UIImage(named: (cocktail?.color)!)
+        let colorImage = UIImage(named: (cocktail.color)!)
         colorImageView.image = colorImage
         
-        let glassImage = UIImage(named: (cocktail?.glass)!)
+        let glassImage = UIImage(named: (cocktail.glass)!)
         glassImageView.image = glassImage
         
-        cocktailInstructionsLabel.text = cocktail?.instruction
+        cocktailInstructionsLabel.text = cocktail.instruction
         
-        alcoholIngridients = cocktail?.recipeAlcohol?.sortedArray(using: [NSSortDescriptor(key: "ingridientName", ascending: true)]) as! [AlcoholRecipePart]
-        nonAlcoholIngridients = cocktail?.recipeNonAlcohol?.sortedArray(using: [NSSortDescriptor(key: "ingridientName", ascending: true)]) as! [NonAlcoholRecipePart]
+        alcoholIngridients = cocktail.recipeAlcohol?.sortedArray(using: [NSSortDescriptor(key: "ingridientName", ascending: true)]) as! [AlcoholRecipePart]
+        nonAlcoholIngridients = cocktail.recipeNonAlcohol?.sortedArray(using: [NSSortDescriptor(key: "ingridientName", ascending: true)]) as! [NonAlcoholRecipePart]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setImage(ifIsFavorite: cocktail.isFavorite)
+    }
+    
+    func setImage(ifIsFavorite isFavorite: Bool){
+        if isFavorite {
+            favoritesButton.image = UIImage(named: "Remove from Favorites")
+        } else {
+            favoritesButton.image = UIImage(named: "Add to Favorites")
+        }
+    }
+    
+    @IBAction func favoritesTapped(_ sender: UIBarButtonItem) {
+        cocktail.isFavorite = !cocktail.isFavorite
         
+        setImage(ifIsFavorite: cocktail.isFavorite)
+        
+        do {
+            try managedObjectContext?.save()
+        } catch {
+            fatalError("Failed to save context")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +82,7 @@ class CocktailDetailViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView == alcoholRecipeDetailsCollectionView ? cocktail?.recipeAlcohol?.count : cocktail?.recipeNonAlcohol?.count)!
+        return (collectionView == alcoholRecipeDetailsCollectionView ? cocktail.recipeAlcohol?.count : cocktail.recipeNonAlcohol?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

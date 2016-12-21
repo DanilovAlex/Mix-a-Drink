@@ -29,11 +29,11 @@ class CocktailSectionHeaderTableViewCell: UITableViewCell {
         
         let imageName = name.contains("Glass") ? name + " Black" : name
         
-        guard let image = UIImage(named: imageName) else {
-            return
+        if let image = UIImage(named: imageName) {
+            headerImageView.image = image
+        } else {
+            headerImageView.image = UIImage(named: "Image Not Found")!
         }
-        
-        headerImageView.image = image
     }
 
 }

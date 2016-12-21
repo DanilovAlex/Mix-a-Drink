@@ -13,7 +13,6 @@
         <attribute name="measure" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="amounts" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Cocktail" representedClassName="Cocktail" syncable="YES" codeGenerationType="class">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,17 +22,14 @@
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="strength" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="amounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Amount" inverseName="usedIn" inverseEntity="Amount" syncable="YES"/>
         <relationship name="recipeAlcohol" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AlcoholRecipePart" inverseName="cocktail" inverseEntity="AlcoholRecipePart" syncable="YES"/>
         <relationship name="recipeNonAlcohol" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NonAlcoholRecipePart" inverseName="cocktail" inverseEntity="NonAlcoholRecipePart" syncable="YES"/>
         <relationship name="requiresAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alcohol" inverseName="usedIn" inverseEntity="Alcohol" syncable="YES"/>
-        <relationship name="requiresGlass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Glass" inverseName="usedIn" inverseEntity="Glass" syncable="YES"/>
         <relationship name="requiresNonAlcohol" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NonAlcohol" inverseName="usedIn" inverseEntity="NonAlcohol" syncable="YES"/>
     </entity>
     <entity name="Glass" representedClassName="Glass" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="requiresGlass" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Ingridient" representedClassName="Ingridient" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -55,9 +51,9 @@
     <elements>
         <element name="Alcohol" positionX="-65" positionY="216" width="128" height="88"/>
         <element name="AlcoholRecipePart" positionX="108" positionY="-201" width="128" height="73"/>
-        <element name="Amount" positionX="-497" positionY="-148" width="128" height="103"/>
-        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="238"/>
-        <element name="Glass" positionX="108" positionY="-18" width="128" height="88"/>
+        <element name="Amount" positionX="-497" positionY="-148" width="128" height="90"/>
+        <element name="Cocktail" positionX="-324" positionY="-240" width="128" height="210"/>
+        <element name="Glass" positionX="108" positionY="-18" width="128" height="75"/>
         <element name="Ingridient" positionX="-317" positionY="414" width="128" height="90"/>
         <element name="NonAlcohol" positionX="-533" positionY="224" width="128" height="73"/>
         <element name="NonAlcoholRecipePart" positionX="106" positionY="-120" width="128" height="73"/>

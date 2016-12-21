@@ -14,13 +14,20 @@ private let reuseIdentifier = "ingridientCell"
 class IngridientsCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
 
     weak var managedObjectContext: NSManagedObjectContext?
-    var resultsController: NSFetchedResultsController<Alcohol>!
+    var resultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    var ingridientType: IngridientType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var request = NSFetchRequest<NSFetchRequestResult>()
         
-        let request = NSFetchRequest<Alcohol>(entityName: "Alcohol")
+        if ingridientType == .Alcohol {
+            request = NSFetchRequest<Alcohol>(entityName: "Alcohol") as! NSFetchRequest<NSFetchRequestResult>
+        } else {
+            request = NSFetchRequest<NonAlcohol>(entityName: "NonAlcohol") as! NSFetchRequest<NSFetchRequestResult>
+        }
+        //let request = NSFetchRequest<Alcohol>(entityName: "Alcohol")
         let typeSortDescriptor = NSSortDescriptor(key: "type", ascending: true)
         let nameSortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         
@@ -80,11 +87,25 @@ class IngridientsCollectionViewController: UICollectionViewController, NSFetched
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IngridientCollectionViewCell
     
-        let alcohol = resultsController.object(at: indexPath)
+        let ingridient = resultsController.object(at: indexPath)
         
-        cell.configureCell(forIngridient: alcohol)
+        cell.configureCell(forIngridient: ingridient as! Ingridient)
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! IngridientSectionHeaderCollectionReusableView
+        
+        guard let sections = resultsController.sections else {
+            fatalError("No sections in results controller")
+        }
+        
+        let sectionInfo = sections[indexPath.section]
+        
+        header.setHeaderTitle(sectionInfo.name)
+        
+        return header
     }
     
     func loadData() {
@@ -98,12 +119,17 @@ class IngridientsCollectionViewController: UICollectionViewController, NSFetched
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! IngridientCollectionViewCell
         
-        let alcohol = resultsController.object(at: indexPath)
+        let ingridient = resultsController.object(at: indexPath) as! Ingridient
         
-        alcohol.isAvailible = !alcohol.isAvailible
+        ingridient.isAvailible = !ingridient.isAvailible
         
-        cell.setImage(selected: alcohol.isAvailible, forIngridient: alcohol)
+        cell.setImage(selected: ingridient.isAvailible, forIngridient: ingridient)
         
+        do {
+            try managedObjectContext?.save()
+        } catch {
+            fatalError("Could not save context")
+        }
     }
 
     // MARK: UICollectionViewDelegate

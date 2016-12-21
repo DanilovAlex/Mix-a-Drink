@@ -90,21 +90,27 @@ class CategorySelectionTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! GroupedCocktailTableViewController
-        destinationVC.managedObjectContext = managedObjectContext
         
-        switch segue.identifier! {
-        case "sortByColor":
-            destinationVC.sortBy = "color"
-        case "sortByStrength":
-            destinationVC.sortBy = "strength"
-        case "sortByGlass":
-            destinationVC.sortBy = "glass"
-        case "sortByDrink":
-            destinationVC.sortBy = nil
-        default:
-            destinationVC.sortBy = "color"
+        if segue.identifier == "sortByDrink" {
+            let destinationVC = segue.destination as! AlcoholDrinksTableViewController
+            destinationVC.managedObjectContext = managedObjectContext
+
+        } else {
+            let destinationVC = segue.destination as! GroupedCocktailTableViewController
+            destinationVC.managedObjectContext = managedObjectContext
+            
+            switch segue.identifier! {
+            case "sortByColor":
+                destinationVC.sortBy = "color"
+            case "sortByStrength":
+                destinationVC.sortBy = "strength"
+            case "sortByGlass":
+                destinationVC.sortBy = "glass"
+            default:
+                destinationVC.sortBy = "color"
+            }
         }
+        
     }
     
 

@@ -14,16 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var coreData = CoreDataStack()
+    var alcoholCache: [String:Alcohol] = [:]
+    var nonAlcoholCache: [String:NonAlcohol] = [:]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let processedTypes:[DataType] = [.Alcohol, .NonAlcohol, .Amount, .Glass, .Cocktail]
+        let processedTypes:[DataType] = [.Alcohol, .NonAlcohol, .Cocktail]
+        let deleteTypes:[DataType] = processedTypes + [.Amount, .Glass]
         
         //Delete all records in the DB
-        deleteRecords(forEntities: processedTypes)
+        deleteRecords(forEntities: deleteTypes)
             
         //Check for the records needed to be uploaded
         checkDataStore(forEntities: processedTypes)
+        
+        print(alcoholCache)
+        print(nonAlcoholCache)
         
         let tabBarController = self.window?.rootViewController as! UITabBarController
         
@@ -34,15 +40,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         categorySelectionTableViewController.managedObjectContext = coreData.persistentContainer.viewContext
         
         //Second tab - My bar
-        let ingridientCollectionViewController = tabBarController.viewControllers?[1] as! IngridientsCollectionViewController
-        ingridientCollectionViewController.managedObjectContext = coreData.persistentContainer.viewContext
+        let myBarNavigationController = tabBarController.viewControllers?[1] as! UINavigationController
+        let myBarViewController = myBarNavigationController.topViewController as! MyBarViewController
+        myBarViewController.managedObjectContext = coreData.persistentContainer.viewContext
         
         //Third tab - Favorites
         
         let favoritesNavigationController = tabBarController.viewControllers?[2] as! UINavigationController
-        let cocktailTableViewController = favoritesNavigationController.topViewController as! CocktailTableViewController
+        let cocktailTableViewController = favoritesNavigationController.topViewController as! GroupedCocktailTableViewController
+        cocktailTableViewController.navigationItem.title = "Favorite Cocktails"
         cocktailTableViewController.managedObjectContext = coreData.persistentContainer.viewContext
-
+        cocktailTableViewController.searchPredicate = NSPredicate(format: "isFavorite = YES")
         
         return true
     }
@@ -153,6 +161,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     let recipeAlcoholPart = cocktail.recipeAlcohol?.mutableCopy() as! NSMutableSet
                     
+                    let requiredAlcohol = cocktail.requiresAlcohol?.mutableCopy() as! NSMutableSet
+                    
                     let alcoholIngridients = objectData["alcoholingridients"] as! NSArray
                     let alcoholAmounts = objectData["alcoholamounts"] as! NSArray
                     
@@ -166,10 +176,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         alcoholPart.ingridientType = IngridientType.Alcohol.rawValue
                         
                         recipeAlcoholPart.add(alcoholPart)
+                        requiredAlcohol.add(alcoholCache[ingridientName]!)
                         print("Found ingridient \(ingridientName) needed \(amountName)")
                     }
                     
                     let recipeNonAlcoholPart = cocktail.recipeNonAlcohol?.mutableCopy() as! NSMutableSet
+                    
+                    let requiredNonAlcohol = cocktail.requiresNonAlcohol?.mutableCopy() as! NSMutableSet
                     
                     let nonalcoholIngridients = objectData["nonalcoholingridients"] as! NSArray
                     let nonalcoholAmounts = objectData["nonalcoholamounts"] as! NSArray
@@ -184,10 +197,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         nonAlcoholPart.ingridientType = IngridientType.NonAlcohol.rawValue
                         
                         recipeNonAlcoholPart.add(nonAlcoholPart)
+                        requiredNonAlcohol.add(nonAlcoholCache[ingridientName]!)
                         print("Found ingridient \(ingridientName) needed \(amountName)")
                     }
                     cocktail.recipeAlcohol = recipeAlcoholPart.copy() as? NSSet
                     cocktail.recipeNonAlcohol = recipeNonAlcoholPart.copy() as? NSSet
+                    
+                    cocktail.requiresAlcohol = requiredAlcohol.copy() as? NSSet
+                    cocktail.requiresNonAlcohol = requiredNonAlcohol.copy() as? NSSet
  
                     cocktail.name = objectName
                     cocktail.instruction = instruction
@@ -212,6 +229,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     alcohol.strength = strength
                     alcohol.isAvailible = false
                     alcohol.image = NSData.init(data: UIImagePNGRepresentation(objectImage)!)
+                    alcoholCache[alcohol.name!] = alcohol
                 case .NonAlcohol:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     
@@ -224,6 +242,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     nonAlcohol.type = type
                     nonAlcohol.isAvailible = false
                     nonAlcohol.image = NSData.init(data: UIImagePNGRepresentation(objectImage)!)
+                    nonAlcoholCache[nonAlcohol.name!] = nonAlcohol
                 case .Glass:
                     print("Proccessing object \(objectName) of \(entity.rawValue) type")
                     let glass = Glass(context: context)

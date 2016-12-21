@@ -15,6 +15,7 @@ class GroupedCocktailTableViewController: UITableViewController, NSFetchedResult
     weak var managedObjectContext: NSManagedObjectContext?
     var sortBy: String?
     var resultsController: NSFetchedResultsController<Cocktail>!
+    var searchPredicate: NSPredicate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,17 @@ class GroupedCocktailTableViewController: UITableViewController, NSFetchedResult
         } else {
             request.sortDescriptors = [nameSortDescriptor]
         }
+        if searchPredicate != nil {
+            request.predicate = searchPredicate
+        }
         
         resultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: managedObjectContext!, sectionNameKeyPath: sortBy, cacheName: nil)
         resultsController.delegate = self
-
-        loadData()
+        emptyMessage(message: "No cocktails found!")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        reloadTable()
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,7 +86,7 @@ class GroupedCocktailTableViewController: UITableViewController, NSFetchedResult
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return sortBy == nil ? 0 : 50
     }
     
     // MARK: - Load Data Function
@@ -92,7 +99,28 @@ class GroupedCocktailTableViewController: UITableViewController, NSFetchedResult
         }
     }
     
-
+    public func reloadTable() {
+        loadData()
+        cocktailsTableView.reloadData()
+        if resultsController.fetchedObjects?.count == 0 {
+            self.tableView.backgroundView?.isHidden = false
+        } else {
+            self.tableView.backgroundView?.isHidden = true
+        }
+    }
+    
+    func emptyMessage(message:String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: cocktailsTableView.bounds.size.width, height: self.view.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = UIColor.black
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        messageLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+        messageLabel.sizeToFit()
+        
+        self.tableView.backgroundView = messageLabel;
+        self.tableView.separatorStyle = .none;
+    }
     
     // MARK: - Navigation
 
