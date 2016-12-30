@@ -13,7 +13,7 @@ private let reuseIdentifier = "ingridientCell"
 
 class IngridientsCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
 
-    weak var managedObjectContext: NSManagedObjectContext?
+    weak var context: NSManagedObjectContext?
     var resultsController: NSFetchedResultsController<NSFetchRequestResult>!
     var ingridientType: IngridientType?
     
@@ -33,20 +33,16 @@ class IngridientsCollectionViewController: UICollectionViewController, NSFetched
         
         request.sortDescriptors = [typeSortDescriptor, nameSortDescriptor]
         
-        resultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: managedObjectContext!, sectionNameKeyPath: "type", cacheName: nil)
+        resultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context!, sectionNameKeyPath: "type", cacheName: nil)
         resultsController.delegate = self
         
         loadData()
 
-        // Register cell classes
-        //self.collectionView!.register(IngridientCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         do {
-            try managedObjectContext?.save()
+            try context?.save()
         } catch {
             fatalError("Unable to save context")
         }
@@ -126,41 +122,10 @@ class IngridientsCollectionViewController: UICollectionViewController, NSFetched
         cell.setImage(selected: ingridient.isAvailible, forIngridient: ingridient)
         
         do {
-            try managedObjectContext?.save()
+            try context?.save()
         } catch {
             fatalError("Could not save context")
         }
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

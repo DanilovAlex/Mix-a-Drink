@@ -25,15 +25,10 @@ class IngridientCollectionViewCell: UICollectionViewCell {
     }
     
     func setImage(selected: Bool, forIngridient ingridient: Ingridient) {
-        guard var name = ingridient.name else { return }
-        
-        name += selected ? " Selected" : " Greyed"
-        
-        if let image = UIImage(named: name) {
-            ingridientImageView.image = image
-        }
-        else {
-            ingridientImageView.image = UIImage(named: "Image Not Found")!
+        if selected {
+            ingridientImageView.image = UIImage(data: ingridient.imageSelected as! Data)
+        } else {
+            ingridientImageView.image = UIImage(data: ingridient.imageGreyed as! Data)
         }
     }
     

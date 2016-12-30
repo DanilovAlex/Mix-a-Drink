@@ -12,11 +12,21 @@ enum DataType: String {
     case Cocktail = "cocktail"
     case Alcohol = "alcohol"
     case NonAlcohol = "nonalcohol"
-    case Amount = "amount"
     case Glass = "glass"
+    case Strength = "strength"
+    case Color = "color"
 }
+
+let allEntities:[DataType] = [.Alcohol, .NonAlcohol, .Glass, .Strength, .Color, .Cocktail]
 
 enum IngridientType: String {
     case Alcohol = "Alcohol"
     case NonAlcohol = "NonAlcohol"
 }
+
+enum PropertyType: String {
+    case GlassProperty = "glass"
+    case StrengthProperty = "strength"
+    case ColorProperty = "color"
+}
+

@@ -16,9 +16,9 @@ class MyBarViewController: UIViewController {
     @IBOutlet weak var nonAlcoholContainerView: UIView!
     @IBOutlet weak var cocktailsContainerView: UIView!
     
-    weak var cocktailTableVC: GroupedCocktailTableViewController!
+    weak var cocktailTableVC: CocktailListTableViewController!
     
-    weak var managedObjectContext: NSManagedObjectContext?
+    weak var context: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class MyBarViewController: UIViewController {
             nonAlcoholContainerView.isHidden = true
             cocktailsContainerView.isHidden = false
             instructionLabel.text = "With the selected ingridients\nyou can make the following cocktails:"
-            cocktailTableVC.reloadTable()
+            cocktailTableVC.reloadData()
         default:
             break
         }
@@ -67,17 +67,17 @@ class MyBarViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         switch segue.identifier! {
-        case "alcoholSegue":
+        case "alcohol":
             let destinationVC = segue.destination as! IngridientsCollectionViewController
-            destinationVC.managedObjectContext = managedObjectContext
+            destinationVC.context = context
             destinationVC.ingridientType = .Alcohol
-        case "nonAlcoholSegue":
+        case "nonAlcohol":
             let destinationVC = segue.destination as! IngridientsCollectionViewController
-            destinationVC.managedObjectContext = managedObjectContext
+            destinationVC.context = context
             destinationVC.ingridientType = .NonAlcohol
-        case "cocktailsSegue":
-            let destinationVC = segue.destination as! GroupedCocktailTableViewController
-            destinationVC.managedObjectContext = managedObjectContext
+        case "cocktails":
+            let destinationVC = segue.destination as! CocktailListTableViewController
+            destinationVC.context = context
             cocktailTableVC = destinationVC
             destinationVC.searchPredicate = NSPredicate(format: "ANY requiresAlcohol.@count == SUBQUERY(requiresAlcohol, $requiresAlcohol, $requiresAlcohol.isAvailible == YES).@count AND requiresNonAlcohol.@count == SUBQUERY(requiresNonAlcohol, $requiresNonAlcohol, $requiresNonAlcohol.isAvailible == YES).@count")
         default:

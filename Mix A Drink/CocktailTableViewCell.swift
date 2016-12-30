@@ -1,8 +1,8 @@
 //
 //  CocktailTableViewCell.swift
-//  Mix A Drink
+//  Mix A Drink DB Load Check
 //
-//  Created by Alexander on 11.12.16.
+//  Created by Alexander on 23.12.16.
 //  Copyright © 2016 Alexander Danilov. All rights reserved.
 //
 
@@ -10,37 +10,41 @@ import UIKit
 
 class CocktailTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cocktailNameLabel: UILabel!
     @IBOutlet weak var cocktailImageView: UIImageView!
-    @IBOutlet weak var strengthImageView: UIImageView!
-    @IBOutlet weak var colorImageView: UIImageView!
-    @IBOutlet weak var glassImageView: UIImageView!
+    @IBOutlet weak var cocktailNameLabel: UILabel!
+    @IBOutlet weak var leftPropertyImageView: UIImageView!
+    @IBOutlet weak var middlePropertyImageView: UIImageView!
+    @IBOutlet weak var rightPropertyImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - Cell configuration
     
-    func configureCell(cocktail: Cocktail){
+    func configureCell(forCocktail cocktail: Cocktail){
         cocktailNameLabel.text = cocktail.name
         
-        let cocktailImage = UIImage(data: cocktail.image! as Data)
-        cocktailImageView.image = cocktailImage
+        backgroundImageView.layer.cornerRadius = 10.0
+        cocktailImageView.clipsToBounds = true
         
-        let strengthImage = UIImage(named: cocktail.strength!)
-        strengthImageView.image = strengthImage
-        
-        let colorImage = UIImage(named: cocktail.color!)
-        colorImageView.image = colorImage
-        
-        let glassImage = UIImage(named: cocktail.glass!)
-        glassImageView.image = glassImage
-    }
+        cocktailImageView.image = UIImage(data: cocktail.image as! Data)
+        cocktailImageView.layer.cornerRadius = cocktailImageView.frame.height/2
+        cocktailImageView.clipsToBounds = true
 
+        leftPropertyImageView.image = UIImage(data: cocktail.strength?.imageDark as! Data)
+        middlePropertyImageView.image = UIImage(data: cocktail.color?.imageDark as! Data)
+        rightPropertyImageView.image = UIImage(data: cocktail.glass?.imageDark as! Data)
+        
+    }
+    
+    func configureSearchCell(forCocktail cocktail: Cocktail){
+        cocktailNameLabel.text = cocktail.name
+        
+        cocktailImageView.image = UIImage(data: cocktail.image as! Data)
+        cocktailImageView.layer.cornerRadius = cocktailImageView.frame.height/2
+        cocktailImageView.clipsToBounds = true
+        
+        leftPropertyImageView.image = UIImage(data: cocktail.strength?.imageDark as! Data)
+        middlePropertyImageView.image = UIImage(data: cocktail.color?.imageDark as! Data)
+        rightPropertyImageView.image = UIImage(data: cocktail.glass?.imageDark as! Data)
+    }
+    
 }

@@ -10,14 +10,33 @@ import Foundation
 import CoreData
 
 class CoreDataStack {
+    
     lazy var persistentContainer: NSPersistentContainer = {
+        
         let container = NSPersistentContainer(name: "Mix_A_Drink")
+        
+        let seededData: String = "Mix_A_Drink"
+        var persistentStoreDescriptions: NSPersistentStoreDescription
+        
+        let storeUrl = NSPersistentContainer.defaultDirectoryURL().appendingPathComponent("Mix_A_Drink.sqlite")
+        
+        if !FileManager.default.fileExists(atPath: (storeUrl.path)) {
+            let seededDataUrl = Bundle.main.url(forResource: seededData, withExtension: "sqlite")
+            try! FileManager.default.copyItem(at: seededDataUrl!, to: storeUrl)
+            
+        }
+        
+        container.persistentStoreDescriptions = [NSPersistentStoreDescription(url: storeUrl)]
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let nserror = error as NSError? {
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            if let error = error {
+                
+                fatalError("Unresolved error \(error),")
             }
         })
+        
         return container
+        
+        
     }()
     
     func saveContext() {
