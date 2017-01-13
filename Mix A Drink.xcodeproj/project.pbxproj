@@ -10,6 +10,8 @@
 		FA211AB51E03C8150060C213 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA211AB41E03C8150060C213 /* String+Extension.swift */; };
 		FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8431E004E1200B6968C /* dataTypes.swift */; };
 		FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */; };
+		FA49A7211E281374008C335C /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA49A7201E281374008C335C /* Mix_A_Drink.sqlite */; };
+		FA7FF0931E28BFBD00C745B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FF0921E28BFBD00C745B1 /* Constants.swift */; };
 		FA9D2D021E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */; };
 		FA9D2D041E16F22200FE8269 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */; };
 		FA9D2D0A1E16F28100FE8269 /* All.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D051E16F28100FE8269 /* All.jpg */; };
@@ -21,7 +23,6 @@
 		FA9D2D151E16F2B300FE8269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D111E16F2B300FE8269 /* AppDelegate.swift */; };
 		FA9D2D161E16F2B300FE8269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D121E16F2B300FE8269 /* Main.storyboard */; };
 		FA9D2D171E16F2B300FE8269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D131E16F2B300FE8269 /* LaunchScreen.storyboard */; };
-		FA9D2D181E16F2B300FE8269 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D141E16F2B300FE8269 /* Info.plist */; };
 		FA9D2D201E16F2CF00FE8269 /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D191E16F2CF00FE8269 /* CocktailTableViewCell.swift */; };
 		FA9D2D211E16F2CF00FE8269 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D1A1E16F2CF00FE8269 /* PropertyTableViewCell.swift */; };
 		FA9D2D221E16F2CF00FE8269 /* RecipeElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D1B1E16F2CF00FE8269 /* RecipeElementCollectionViewCell.swift */; };
@@ -39,7 +40,6 @@
 		FA9D2D391E16F2E400FE8269 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */; };
 		FA9D2D3A1E16F2E400FE8269 /* IngridientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D301E16F2E400FE8269 /* IngridientTableViewController.swift */; };
 		FA9D2D3B1E16F2E400FE8269 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */; };
-		FA9D2D451E16F81A00FE8269 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D441E16F80E00FE8269 /* Mix_A_Drink.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +47,8 @@
 		FA2FC7FD1DFD9BBB00B6968C /* Mix A Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix A Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FC8431E004E1200B6968C /* dataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTypes.swift; sourceTree = "<group>"; };
 		FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
+		FA49A7201E281374008C335C /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
+		FA7FF0921E28BFBD00C745B1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mix_A_Drink.xcdatamodel; sourceTree = "<group>"; };
 		FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FA9D2D051E16F28100FE8269 /* All.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = All.jpg; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 		FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D301E16F2E400FE8269 /* IngridientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngridientTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		FA9D2D441E16F80E00FE8269 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +149,7 @@
 			children = (
 				FA2FC8431E004E1200B6968C /* dataTypes.swift */,
 				FA211AB41E03C8150060C213 /* String+Extension.swift */,
+				FA7FF0921E28BFBD00C745B1 /* Constants.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -205,7 +207,7 @@
 		FA9D2D3F1E16F36E00FE8269 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				FA9D2D441E16F80E00FE8269 /* Mix_A_Drink.sqlite */,
+				FA49A7201E281374008C335C /* Mix_A_Drink.sqlite */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -278,9 +280,8 @@
 				FA9D2D0C1E16F28100FE8269 /* Colors.jpg in Resources */,
 				FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */,
 				FA9D2D101E16F29A00FE8269 /* Assets.xcassets in Resources */,
-				FA9D2D181E16F2B300FE8269 /* Info.plist in Resources */,
-				FA9D2D451E16F81A00FE8269 /* Mix_A_Drink.sqlite in Resources */,
 				FA9D2D0E1E16F28100FE8269 /* Strength.jpg in Resources */,
+				FA49A7211E281374008C335C /* Mix_A_Drink.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +298,7 @@
 				FA9D2D371E16F2E400FE8269 /* IngridientsCollectionViewController.swift in Sources */,
 				FA9D2D221E16F2CF00FE8269 /* RecipeElementCollectionViewCell.swift in Sources */,
 				FA9D2D331E16F2E400FE8269 /* CocktailListTableViewController.swift in Sources */,
+				FA7FF0931E28BFBD00C745B1 /* Constants.swift in Sources */,
 				FA9D2D3A1E16F2E400FE8269 /* IngridientTableViewController.swift in Sources */,
 				FA9D2D041E16F22200FE8269 /* CoreDataStack.swift in Sources */,
 				FA9D2D351E16F2E400FE8269 /* CocktailDetailsViewController.swift in Sources */,

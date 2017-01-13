@@ -30,7 +30,6 @@ class CocktailDetailsViewController: UIViewController {
         
         backgroundImageView.layer.cornerRadius = 10.0
         
-        cocktailImageView.layer.cornerRadius = cocktailImageView.frame.height/2
         cocktailImageView.layer.borderColor = UIColor.white.cgColor
         cocktailImageView.layer.borderWidth = 2.0
         cocktailImageView.image = UIImage(data: cocktail.image as! Data)
@@ -48,7 +47,15 @@ class CocktailDetailsViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setButtonImage(ifIsFavorite: cocktail.isFavorite)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        cocktailImageView.layer.cornerRadius = cocktailImageView.bounds.width/2.0
     }
     
     func setButtonImage(ifIsFavorite isFavorite: Bool){

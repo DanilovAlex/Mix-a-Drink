@@ -36,6 +36,8 @@ class CocktailListTableViewController: UITableViewController, NSFetchedResultsCo
             request?.predicate = searchPredicate
         }
         
+        request?.fetchBatchSize = gBatchSize
+        
         resultsController = NSFetchedResultsController(fetchRequest: request!, managedObjectContext: context!, sectionNameKeyPath: sectionName, cacheName: nil)
         resultsController.delegate = self
         
