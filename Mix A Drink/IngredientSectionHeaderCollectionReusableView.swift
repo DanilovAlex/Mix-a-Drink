@@ -1,5 +1,5 @@
 //
-//  IngridientSectionHeaderCollectionReusableView.swift
+//  IngredientSectionHeaderCollectionReusableView.swift
 //  Mix A Drink
 //
 //  Created by Alexander on 19.12.16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IngridientSectionHeaderCollectionReusableView: UICollectionReusableView {
+class IngredientSectionHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var sectionLabel: UILabel!
     
     func setHeaderTitle(_ name: String) {

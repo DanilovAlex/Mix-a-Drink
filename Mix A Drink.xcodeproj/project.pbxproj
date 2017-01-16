@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		FA211AB51E03C8150060C213 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA211AB41E03C8150060C213 /* String+Extension.swift */; };
 		FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8431E004E1200B6968C /* dataTypes.swift */; };
+		FA30B1571E2D539B00982471 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */; };
 		FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */; };
 		FA7FF0931E28BFBD00C745B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FF0921E28BFBD00C745B1 /* Constants.swift */; };
-		FA7FF0951E28FDF700C745B1 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA7FF0941E28FDF700C745B1 /* Mix_A_Drink.sqlite */; };
 		FA9D2D021E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */; };
 		FA9D2D041E16F22200FE8269 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */; };
 		FA9D2D0A1E16F28100FE8269 /* All.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D051E16F28100FE8269 /* All.jpg */; };
@@ -47,8 +47,8 @@
 		FA2FC7FD1DFD9BBB00B6968C /* Mix A Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix A Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FC8431E004E1200B6968C /* dataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTypes.swift; sourceTree = "<group>"; };
 		FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
+		FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
 		FA7FF0921E28BFBD00C745B1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FA7FF0941E28FDF700C745B1 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
 		FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mix_A_Drink.xcdatamodel; sourceTree = "<group>"; };
 		FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FA9D2D051E16F28100FE8269 /* All.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = All.jpg; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		FA9D2D3F1E16F36E00FE8269 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				FA7FF0941E28FDF700C745B1 /* Mix_A_Drink.sqlite */,
+				FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */,
 				FA9D2D101E16F29A00FE8269 /* Assets.xcassets in Resources */,
 				FA9D2D0E1E16F28100FE8269 /* Strength.jpg in Resources */,
-				FA7FF0951E28FDF700C745B1 /* Mix_A_Drink.sqlite in Resources */,
+				FA30B1571E2D539B00982471 /* Mix_A_Drink.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alexander Danilov (9BZ23SP9BA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;

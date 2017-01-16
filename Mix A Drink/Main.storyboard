@@ -323,21 +323,21 @@
             <objects>
                 <tableViewController id="8ix-eo-bd6" customClass="CocktailListTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="fRc-ab-Z5M">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="479"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cocktailCell" id="KNq-PV-qN5" customClass="CocktailTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="343" height="160"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KNq-PV-qN5" id="tje-yr-D3V">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-Wo-YBG">
-                                            <rect key="frame" x="2" y="10" width="339" height="140"/>
+                                            <rect key="frame" x="2" y="10" width="371" height="140"/>
                                             <color key="backgroundColor" red="0.90919750154176504" green="0.90919750154176504" blue="0.90919750154176504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="1N6-oP-FLh">
@@ -347,24 +347,24 @@
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-Sl-eX8">
-                                            <rect key="frame" x="40" y="108" width="29" height="28"/>
+                                            <rect key="frame" x="40" y="108" width="28" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Qg2-Sl-eX8" secondAttribute="height" multiplier="1:1" id="Rt1-mI-aC6"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVU-9g-PvZ">
-                                            <rect key="frame" x="8" y="23" width="242" height="31"/>
+                                            <rect key="frame" x="8" y="23" width="273" height="31"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-0c-AxK">
-                                            <rect key="frame" x="252" y="38" width="83" height="84"/>
+                                            <rect key="frame" x="283" y="38" width="84" height="84"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="9b3-0c-AxK" secondAttribute="height" multiplier="1:1" id="Z7a-8E-IOQ"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-jD-6Q4">
-                                            <rect key="frame" x="71" y="108" width="28" height="28"/>
+                                            <rect key="frame" x="70" y="108" width="28" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="vwB-jD-6Q4" secondAttribute="height" multiplier="1:1" id="ZFz-wV-pFS"/>
                                             </constraints>
@@ -424,16 +424,16 @@
             </objects>
             <point key="canvasLocation" x="56.799999999999997" y="1365.9670164917543"/>
         </scene>
-        <!--Ingridient Table View Controller-->
+        <!--Ingredient Table View Controller-->
         <scene sceneID="ohp-OE-EGU">
             <objects>
-                <tableViewController id="fv7-Ja-3Yh" customClass="IngridientTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fv7-Ja-3Yh" customClass="IngredientTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="b18-Pz-RPX">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingridientCell" id="Mxe-zP-KEu" customClass="IngridientTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Mxe-zP-KEu" customClass="IngredientTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mxe-zP-KEu" id="6zW-oQ-xVX">
@@ -463,12 +463,14 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="ingredientImageView" destination="yEo-sI-H0F" id="0R7-4h-WAl"/>
+                                    <outlet property="ingredientNameLabel" destination="Enr-7o-FV7" id="z3b-Gw-n4y"/>
                                     <outlet property="ingridientImageView" destination="yEo-sI-H0F" id="XFl-92-YdV"/>
                                     <outlet property="ingridientNameLabel" destination="Enr-7o-FV7" id="8Pz-Y0-lXW"/>
                                     <segue destination="8ix-eo-bd6" kind="show" identifier="cocktails" id="O6R-ta-Vyz"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="UiH-9e-Fr3" customClass="IngridientSectionHeaderTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="UiH-9e-Fr3" customClass="IngredientSectionHeaderTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UiH-9e-Fr3" id="jWr-cE-NG6">
@@ -499,7 +501,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="headerName" destination="fuT-QB-aa7" id="dfH-C2-dbE"/>
+                                    <outlet property="headerName" destination="fuT-QB-aa7" id="kfF-OL-cUP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -576,45 +578,45 @@
                         <viewControllerLayoutGuide type="bottom" id="M5u-uw-NVU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sQM-PT-vlF">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="479"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e7T-vX-KDZ">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="479"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0bm-oy-nLi">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-ze-1B8">
-                                                <rect key="frame" x="2" y="2" width="339" height="118"/>
+                                                <rect key="frame" x="2" y="2" width="371" height="136.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbG-Ca-ICi">
-                                                <rect key="frame" x="8" y="13" width="231" height="31"/>
+                                                <rect key="frame" x="8" y="15" width="248.5" height="31"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="JoL-S4-w3d">
-                                                <rect key="frame" x="8" y="83" width="24" height="24"/>
+                                                <rect key="frame" x="8" y="95.5" width="27.5" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JoL-S4-w3d" secondAttribute="height" multiplier="1:1" id="qby-lO-D0J"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="thL-CV-moR">
-                                                <rect key="frame" x="60" y="83" width="24" height="24"/>
+                                                <rect key="frame" x="68" y="95.5" width="27.5" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="thL-CV-moR" secondAttribute="height" multiplier="1:1" id="uwx-lC-YWl"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-f6-YuY">
-                                                <rect key="frame" x="241" y="13" width="94" height="94"/>
+                                                <rect key="frame" x="258.5" y="15" width="108.5" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8gZ-f6-YuY" secondAttribute="height" multiplier="1:1" id="G7n-ru-M6d"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="koo-yE-1C6">
-                                                <rect key="frame" x="34" y="83" width="24" height="24"/>
+                                                <rect key="frame" x="37.5" y="95.5" width="28.5" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="koo-yE-1C6" secondAttribute="height" multiplier="1:1" id="yEA-bK-gID"/>
                                                 </constraints>
@@ -643,10 +645,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBp-RJ-IVC">
-                                        <rect key="frame" x="0.0" y="120" width="343" height="119.5"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="375" height="138.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-Ga-IdT">
-                                                <rect key="frame" x="8" y="8" width="327" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="34r-2c-oos"/>
@@ -659,7 +661,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="87" translatesAutoresizingMaskIntoConstraints="NO" id="6Lh-eS-fRg">
-                                                <rect key="frame" x="0.0" y="31" width="343" height="88.5"/>
+                                                <rect key="frame" x="0.0" y="31" width="375" height="107.5"/>
                                                 <connections>
                                                     <segue destination="PE0-pN-S2X" kind="embed" identifier="alcohol" id="f4z-T4-MMw"/>
                                                 </connections>
@@ -678,10 +680,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrh-fh-FOD">
-                                        <rect key="frame" x="0.0" y="239.5" width="343" height="120"/>
+                                        <rect key="frame" x="0.0" y="277" width="375" height="138.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQD-W3-Sc0">
-                                                <rect key="frame" x="8" y="8" width="327" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="wU9-4v-lNb"/>
@@ -694,7 +696,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="87" translatesAutoresizingMaskIntoConstraints="NO" id="ylD-KL-Pjy">
-                                                <rect key="frame" x="0.0" y="30" width="343" height="90"/>
+                                                <rect key="frame" x="0.0" y="30" width="375" height="108.5"/>
                                                 <connections>
                                                     <segue destination="PE0-pN-S2X" kind="embed" identifier="nonAlcohol" id="ScI-R3-fWT"/>
                                                 </connections>
@@ -713,10 +715,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oa-M8-2cq">
-                                        <rect key="frame" x="0.0" y="359.5" width="343" height="119.5"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="375" height="138.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2n-sg-Aig">
-                                                <rect key="frame" x="8" y="8" width="327" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="QTP-wx-Q6S"/>
@@ -729,7 +731,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="79.5" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZU-jG-V7D">
-                                                <rect key="frame" x="8" y="30" width="327" height="81.5"/>
+                                                <rect key="frame" x="8" y="30" width="359" height="100.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -786,7 +788,7 @@
             <objects>
                 <collectionViewController id="PE0-pN-S2X" customClass="RecipeElementCollectionViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="F6x-YA-DrU">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oRS-lj-8B9">
@@ -797,7 +799,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeElementCell" id="CBm-Px-1bS" customClass="RecipeElementCollectionViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-3" width="85" height="95"/>
+                                <rect key="frame" x="0.0" y="7" width="85" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="85" height="95"/>
@@ -896,10 +898,10 @@
             </objects>
             <point key="canvasLocation" x="-871" y="629"/>
         </scene>
-        <!--Ingridients Collection View Controller-->
+        <!--Ingredients Collection View Controller-->
         <scene sceneID="wHv-h8-ivn">
             <objects>
-                <collectionViewController id="bxO-0W-FZ8" customClass="IngridientsCollectionViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="bxO-0W-FZ8" customClass="IngredientsCollectionViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Sde-Vk-mdg">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="479"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -911,7 +913,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ingridientCell" id="Cz7-3P-K5Z" customClass="IngridientCollectionViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ingredientCell" id="Cz7-3P-K5Z" customClass="IngredientCollectionViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="63" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -941,12 +943,14 @@
                                     <constraint firstItem="UWa-cq-2ty" firstAttribute="leading" secondItem="Cz7-3P-K5Z" secondAttribute="leading" constant="5" id="vFw-jE-Iqd"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="ingredientImageView" destination="UWa-cq-2ty" id="IoV-Yt-5mc"/>
+                                    <outlet property="ingredientNameLabel" destination="uWU-uG-G97" id="WsC-3o-T7e"/>
                                     <outlet property="ingridientImageView" destination="UWa-cq-2ty" id="vm5-LN-9OV"/>
                                     <outlet property="ingridientNameLabel" destination="uWU-uG-G97" id="yyb-TE-vcK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="K8n-5i-vF5" customClass="IngridientSectionHeaderCollectionReusableView" customModule="Mix_A_Drink" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="K8n-5i-vF5" customClass="IngredientSectionHeaderCollectionReusableView" customModule="Mix_A_Drink" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -1078,7 +1082,9 @@
                             <outlet property="delegate" destination="2a3-fu-tCh" id="FKG-MM-tfJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cocktails Search" id="KQd-ui-b5w"/>
+                    <navigationItem key="navigationItem" title="Cocktails Search" id="KQd-ui-b5w">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="k2O-Wl-FgV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="UuA-Uf-VQr" id="S3P-4e-hWq"/>
                     </connections>
@@ -1137,10 +1143,10 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TZO-dM-VPz"/>
-        <segue reference="rEV-99-WR3"/>
-        <segue reference="FNr-Dd-XqA"/>
-        <segue reference="ScI-R3-fWT"/>
         <segue reference="jQd-ie-L5S"/>
+        <segue reference="lUq-Bj-6GS"/>
+        <segue reference="gro-tL-VGJ"/>
+        <segue reference="ScI-R3-fWT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>
