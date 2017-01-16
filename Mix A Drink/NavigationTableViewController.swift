@@ -107,9 +107,9 @@ class NavigationTableViewController: UITableViewController {
             destinationVC.context = context
             destinationVC.typeToDisplay = PropertyType.GlassProperty
         case "drinks":
-            let destinationVC = segue.destination as! IngridientTableViewController
+            let destinationVC = segue.destination as! IngredientTableViewController
             destinationVC.context = context
-            destinationVC.typeToDisplay = IngridientType.Alcohol
+            destinationVC.typeToDisplay = IngredientType.Alcohol
         default:
             break
         }

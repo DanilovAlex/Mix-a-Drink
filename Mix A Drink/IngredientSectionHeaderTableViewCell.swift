@@ -1,5 +1,5 @@
 //
-//  IngridientSectionHeaderTableViewCell.swift
+//  IngredientSectionHeaderTableViewCell.swift
 //  Mix A Drink DB Load Check
 //
 //  Created by Alexander on 26.12.16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IngridientSectionHeaderTableViewCell: UITableViewCell {
+class IngredientSectionHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var headerName: UILabel!
     

@@ -19,7 +19,7 @@ enum DataType: String {
 
 let allEntities:[DataType] = [.Alcohol, .NonAlcohol, .Glass, .Strength, .Color, .Cocktail]
 
-enum IngridientType: String {
+enum IngredientType: String {
     case Alcohol = "Alcohol"
     case NonAlcohol = "NonAlcohol"
 }

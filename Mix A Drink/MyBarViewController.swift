@@ -47,12 +47,12 @@ class MyBarViewController: UIViewController {
             alcoholContainerView.isHidden = true
             nonAlcoholContainerView.isHidden = false
             cocktailsContainerView.isHidden = true
-            instructionLabel.text = "Instruction:\nMark Other Ingridients You Have"
+            instructionLabel.text = "Instruction:\nMark Other Ingredients You Have"
         case 2:
             alcoholContainerView.isHidden = true
             nonAlcoholContainerView.isHidden = true
             cocktailsContainerView.isHidden = false
-            instructionLabel.text = "With the selected ingridients\nyou can make the following cocktails:"
+            instructionLabel.text = "With the selected ingredients\nyou can make the following cocktails:"
             cocktailTableVC.reloadData()
         default:
             break
@@ -68,13 +68,13 @@ class MyBarViewController: UIViewController {
         
         switch segue.identifier! {
         case "alcohol":
-            let destinationVC = segue.destination as! IngridientsCollectionViewController
+            let destinationVC = segue.destination as! IngredientsCollectionViewController
             destinationVC.context = context
-            destinationVC.ingridientType = .Alcohol
+            destinationVC.ingredientType = .Alcohol
         case "nonAlcohol":
-            let destinationVC = segue.destination as! IngridientsCollectionViewController
+            let destinationVC = segue.destination as! IngredientsCollectionViewController
             destinationVC.context = context
-            destinationVC.ingridientType = .NonAlcohol
+            destinationVC.ingredientType = .NonAlcohol
         case "cocktails":
             let destinationVC = segue.destination as! CocktailListTableViewController
             destinationVC.context = context

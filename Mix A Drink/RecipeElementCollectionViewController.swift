@@ -14,20 +14,20 @@ private let reuseIdentifier = "recipeElementCell"
 class RecipeElementCollectionViewController: UICollectionViewController {
 
     var cocktail: Cocktail!
-    var partToDisplay: IngridientType?
+    var partToDisplay: IngredientType?
     var recipe: [RecipeElement] = []
-    var ingridients: [Ingridient] = []
+    var ingredients: [Ingredient] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         switch partToDisplay! {
-        case IngridientType.Alcohol:
+        case IngredientType.Alcohol:
             recipe = cocktail.recipeAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [AlcoholRecipeElement]
-            ingridients = cocktail.requiresAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [Alcohol]
-        case IngridientType.NonAlcohol:
+            ingredients = cocktail.requiresAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [Alcohol]
+        case IngredientType.NonAlcohol:
             recipe = cocktail.recipeNonAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [NonAlcoholRecipeElement]
-            ingridients = cocktail.requiresNonAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [NonAlcohol]
+            ingredients = cocktail.requiresNonAlcohol?.sortedArray(using: [NSSortDescriptor(key: "name", ascending: true)]) as! [NonAlcohol]
         }
         
         // Register cell classes
@@ -66,9 +66,9 @@ class RecipeElementCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! RecipeElementCollectionViewCell
     
         let recipeElement = recipe[indexPath.row]
-        let ingridient = ingridients[indexPath.row]
+        let ingredient = ingredients[indexPath.row]
         
-        cell.configureCell(forRecipeElement: recipeElement, andIngridient: ingridient)
+        cell.configureCell(forRecipeElement: recipeElement, andIngredient: ingredient)
     
         return cell
     }

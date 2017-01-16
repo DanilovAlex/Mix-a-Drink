@@ -1,5 +1,5 @@
 //
-//  IngridientTableViewController.swift
+//  IngredientTableViewController.swift
 //  Mix A Drink DB Load Check
 //
 //  Created by Alexander on 26.12.16.
@@ -9,11 +9,11 @@
 import UIKit
 import CoreData
 
-class IngridientTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class IngredientTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     weak var context: NSManagedObjectContext?
-    var resultsController: NSFetchedResultsController<Ingridient>!
-    var typeToDisplay: IngridientType?
+    var resultsController: NSFetchedResultsController<Ingredient>!
+    var typeToDisplay: IngredientType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,9 @@ class IngridientTableViewController: UITableViewController, NSFetchedResultsCont
         var request:NSFetchRequest<NSFetchRequestResult>?
         
         switch typeToDisplay! {
-        case IngridientType.Alcohol:
+        case IngredientType.Alcohol:
             request = Alcohol.fetchRequest()
-        case IngridientType.NonAlcohol:
+        case IngredientType.NonAlcohol:
             request = NonAlcohol.fetchRequest()
         }
         
@@ -34,7 +34,7 @@ class IngridientTableViewController: UITableViewController, NSFetchedResultsCont
         //let predicate = NSPredicate(format: "type == %@", NSString(string: "Spirits") as CVarArg)
         //request.predicate = predicate
         
-        resultsController = NSFetchedResultsController(fetchRequest: request as! NSFetchRequest<Ingridient>, managedObjectContext: context!, sectionNameKeyPath: "type", cacheName: nil)
+        resultsController = NSFetchedResultsController(fetchRequest: request as! NSFetchRequest<Ingredient>, managedObjectContext: context!, sectionNameKeyPath: "type", cacheName: nil)
         resultsController.delegate = self
         
         do {
@@ -72,11 +72,11 @@ class IngridientTableViewController: UITableViewController, NSFetchedResultsCont
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ingridientCell", for: indexPath) as! IngridientTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as! IngredientTableViewCell
         
-        let ingridient = resultsController.object(at: indexPath)
+        let ingredient = resultsController.object(at: indexPath)
         
-        cell.configureCell(forIngridient: ingridient)
+        cell.configureCell(forIngredient: ingredient)
         
         return cell
     }
@@ -88,7 +88,7 @@ class IngridientTableViewController: UITableViewController, NSFetchedResultsCont
         
         let sectionInfo = sections[section]
         
-        let header = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! IngridientSectionHeaderTableViewCell
+        let header = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! IngredientSectionHeaderTableViewCell
         header.configureHeader(withName: sectionInfo.name)
         
         return header as UIView
@@ -140,13 +140,13 @@ class IngridientTableViewController: UITableViewController, NSFetchedResultsCont
             destinationVC.context = context
             
             let selectedIndex = tableView.indexPathForSelectedRow!
-            let ingridient = resultsController.object(at: selectedIndex)
+            let ingredient = resultsController.object(at: selectedIndex)
             
             switch typeToDisplay! {
-            case IngridientType.Alcohol:
-                destinationVC.searchPredicate = NSPredicate(format: "requiresAlcohol CONTAINS %@", ingridient as CVarArg)
-            case IngridientType.NonAlcohol:
-                destinationVC.searchPredicate = NSPredicate(format: "requiresNonAlcohol CONTAINS %@", ingridient as CVarArg)
+            case IngredientType.Alcohol:
+                destinationVC.searchPredicate = NSPredicate(format: "requiresAlcohol CONTAINS %@", ingredient as CVarArg)
+            case IngredientType.NonAlcohol:
+                destinationVC.searchPredicate = NSPredicate(format: "requiresNonAlcohol CONTAINS %@", ingredient as CVarArg)
             }
             
             destinationVC.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]

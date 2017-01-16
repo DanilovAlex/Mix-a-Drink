@@ -10,14 +10,14 @@ import UIKit
 
 class RecipeElementCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var ingridientAmountLabel: UILabel!
-    @IBOutlet weak var ingridientNameLabel: UILabel!
-    @IBOutlet weak var ingridientImageView: UIImageView!
+    @IBOutlet weak var ingredientAmountLabel: UILabel!
+    @IBOutlet weak var ingredientNameLabel: UILabel!
+    @IBOutlet weak var ingredientImageView: UIImageView!
     
-    func configureCell(forRecipeElement element: RecipeElement, andIngridient ingridient: Ingridient){
-        ingridientAmountLabel.attributedText = element.amount?.toAmountString
-        ingridientImageView.image = UIImage(data: ingridient.image as! Data)
-        ingridientNameLabel.text = element.name
+    func configureCell(forRecipeElement element: RecipeElement, andIngredient ingredient: Ingredient){
+        ingredientAmountLabel.attributedText = element.amount?.toAmountString
+        ingredientImageView.image = UIImage(data: ingredient.image as! Data)
+        ingredientNameLabel.text = element.name
     }
     
 }
