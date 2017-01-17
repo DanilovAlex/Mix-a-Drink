@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iio-xn-ud8">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -65,11 +65,11 @@
                         <viewControllerLayoutGuide type="bottom" id="MD3-ad-eR2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YJ6-Rv-Zgv">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lcx-iN-Rkw">
-                                <rect key="frame" x="16" y="8" width="343" height="29"/>
+                                <rect key="frame" x="16" y="8" width="288" height="29"/>
                                 <segments>
                                     <segment title="Alcohol"/>
                                     <segment title="Non-Alcohol"/>
@@ -81,25 +81,25 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tue-jN-Jul">
-                                <rect key="frame" x="172" y="44" width="32" height="15"/>
+                                <rect key="frame" x="144" y="44" width="32" height="15"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNG-mO-hxZ">
-                                <rect key="frame" x="16" y="67" width="343" height="479"/>
+                                <rect key="frame" x="16" y="67" width="288" height="380"/>
                                 <connections>
                                     <segue destination="bxO-0W-FZ8" kind="embed" identifier="alcohol" id="TZO-dM-VPz"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qe-My-Mzm">
-                                <rect key="frame" x="16" y="67" width="343" height="479"/>
+                                <rect key="frame" x="16" y="67" width="288" height="380"/>
                                 <connections>
                                     <segue destination="bxO-0W-FZ8" kind="embed" identifier="nonAlcohol" id="YL0-dD-t2h"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itT-eK-QRw">
-                                <rect key="frame" x="16" y="67" width="343" height="479"/>
+                                <rect key="frame" x="16" y="67" width="288" height="380"/>
                                 <connections>
                                     <segue destination="8ix-eo-bd6" kind="embed" identifier="cocktails" id="rEV-99-WR3"/>
                                 </connections>
@@ -146,21 +146,21 @@
             <objects>
                 <tableViewController id="Grd-zw-C6H" customClass="NavigationTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="w6C-ET-lU3">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="3Zg-jf-irh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Qgh-MV-ZHR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qgh-MV-ZHR" id="SHJ-ff-vOm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="All.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-ID-YPR">
-                                                    <rect key="frame" x="0.0" y="12" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-m3-1bk">
                                                     <rect key="frame" x="8" y="82" width="28" height="36"/>
@@ -183,14 +183,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mjv-rw-pQk">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="200" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mjv-rw-pQk" id="zvc-pL-PIr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Colors.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qdj-Fj-aHD">
-                                                    <rect key="frame" x="0.0" y="12" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-zC-BlC">
                                                     <rect key="frame" x="8" y="82" width="67" height="36"/>
@@ -213,14 +213,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SVt-Qh-U8F">
-                                        <rect key="frame" x="0.0" y="400" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="400" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SVt-Qh-U8F" id="YUY-RJ-hiH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Strength.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-tJ-3xm">
-                                                    <rect key="frame" x="0.0" y="12" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-Sn-P3y">
                                                     <rect key="frame" x="8" y="82" width="106" height="36"/>
@@ -243,14 +243,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Q5Y-EA-gl5">
-                                        <rect key="frame" x="0.0" y="600" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="600" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q5Y-EA-gl5" id="lDP-S6-Y4a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glasses.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-Xd-PlC">
-                                                    <rect key="frame" x="0.0" y="12" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-Py-fcX">
                                                     <rect key="frame" x="8" y="82" width="72" height="36"/>
@@ -273,14 +273,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uGq-1a-ucT">
-                                        <rect key="frame" x="0.0" y="800" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="800" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uGq-1a-ucT" id="zf7-jG-BJp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drinks.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-8W-CQx">
-                                                    <rect key="frame" x="0.0" y="12" width="375" height="176"/>
+                                                    <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3l-Nx-rB8">
                                                     <rect key="frame" x="8" y="82" width="63" height="36"/>
@@ -323,21 +323,21 @@
             <objects>
                 <tableViewController id="8ix-eo-bd6" customClass="CocktailListTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="fRc-ab-Z5M">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cocktailCell" id="KNq-PV-qN5" customClass="CocktailTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KNq-PV-qN5" id="tje-yr-D3V">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3CT-Wo-YBG">
-                                            <rect key="frame" x="2" y="10" width="371" height="140"/>
+                                            <rect key="frame" x="2" y="10" width="316" height="140"/>
                                             <color key="backgroundColor" red="0.90919750154176504" green="0.90919750154176504" blue="0.90919750154176504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="1N6-oP-FLh">
@@ -353,12 +353,12 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVU-9g-PvZ">
-                                            <rect key="frame" x="8" y="23" width="273" height="31"/>
+                                            <rect key="frame" x="8" y="23" width="218" height="31"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9b3-0c-AxK">
-                                            <rect key="frame" x="283" y="38" width="84" height="84"/>
+                                            <rect key="frame" x="228" y="38" width="84" height="84"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="9b3-0c-AxK" secondAttribute="height" multiplier="1:1" id="Z7a-8E-IOQ"/>
                                             </constraints>
@@ -399,7 +399,7 @@
                                     <outlet property="leftPropertyImageView" destination="1N6-oP-FLh" id="p9a-9S-xeN"/>
                                     <outlet property="middlePropertyImageView" destination="Qg2-Sl-eX8" id="WKa-Lz-llC"/>
                                     <outlet property="rightPropertyImageView" destination="vwB-jD-6Q4" id="Z98-DY-pj4"/>
-                                    <segue destination="4aT-We-DuF" kind="show" identifier="details" id="FNr-Dd-XqA"/>
+                                    <segue destination="4aT-We-DuF" kind="show" identifier="details" id="f9H-U5-nbB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -429,15 +429,15 @@
             <objects>
                 <tableViewController id="fv7-Ja-3Yh" customClass="IngredientTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="b18-Pz-RPX">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="Mxe-zP-KEu" customClass="IngredientTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mxe-zP-KEu" id="6zW-oQ-xVX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-sI-H0F">
@@ -465,16 +465,14 @@
                                 <connections>
                                     <outlet property="ingredientImageView" destination="yEo-sI-H0F" id="0R7-4h-WAl"/>
                                     <outlet property="ingredientNameLabel" destination="Enr-7o-FV7" id="z3b-Gw-n4y"/>
-                                    <outlet property="ingridientImageView" destination="yEo-sI-H0F" id="XFl-92-YdV"/>
-                                    <outlet property="ingridientNameLabel" destination="Enr-7o-FV7" id="8Pz-Y0-lXW"/>
                                     <segue destination="8ix-eo-bd6" kind="show" identifier="cocktails" id="O6R-ta-Vyz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="UiH-9e-Fr3" customClass="IngredientSectionHeaderTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UiH-9e-Fr3" id="jWr-cE-NG6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuT-QB-aa7">
@@ -484,7 +482,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzM-Kp-Zfg">
-                                            <rect key="frame" x="8" y="50" width="359" height="1"/>
+                                            <rect key="frame" x="8" y="50" width="304" height="1"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="HoK-nN-dR6"/>
@@ -520,15 +518,15 @@
             <objects>
                 <tableViewController id="1og-nl-1lg" customClass="PropertyTableViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="XyC-Od-ndM">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="propertyCell" id="VBq-Wa-eiZ" customClass="PropertyTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VBq-Wa-eiZ" id="Adz-PC-kS7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="ppD-YM-NdV">
@@ -578,45 +576,45 @@
                         <viewControllerLayoutGuide type="bottom" id="M5u-uw-NVU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sQM-PT-vlF">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e7T-vX-KDZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0bm-oy-nLi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSF-ze-1B8">
-                                                <rect key="frame" x="2" y="2" width="371" height="136.5"/>
+                                                <rect key="frame" x="2" y="2" width="316" height="112"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbG-Ca-ICi">
-                                                <rect key="frame" x="8" y="15" width="248.5" height="31"/>
+                                                <rect key="frame" x="8" y="12" width="212" height="31"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="JoL-S4-w3d">
-                                                <rect key="frame" x="8" y="95.5" width="27.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="80" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JoL-S4-w3d" secondAttribute="height" multiplier="1:1" id="qby-lO-D0J"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="thL-CV-moR">
-                                                <rect key="frame" x="68" y="95.5" width="27.5" height="27.5"/>
+                                                <rect key="frame" x="56" y="80" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="thL-CV-moR" secondAttribute="height" multiplier="1:1" id="uwx-lC-YWl"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-f6-YuY">
-                                                <rect key="frame" x="258.5" y="15" width="108.5" height="108"/>
+                                                <rect key="frame" x="222" y="12" width="90" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8gZ-f6-YuY" secondAttribute="height" multiplier="1:1" id="G7n-ru-M6d"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="koo-yE-1C6">
-                                                <rect key="frame" x="37.5" y="95.5" width="28.5" height="27.5"/>
+                                                <rect key="frame" x="32" y="80" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="koo-yE-1C6" secondAttribute="height" multiplier="1:1" id="yEA-bK-gID"/>
                                                 </constraints>
@@ -645,25 +643,25 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBp-RJ-IVC">
-                                        <rect key="frame" x="0.0" y="138.5" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="114" width="320" height="113.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-Ga-IdT">
-                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="304" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="34r-2c-oos"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcohol Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqU-5s-VCL">
-                                                <rect key="frame" x="8" y="11" width="146" height="20"/>
+                                                <rect key="frame" x="8" y="11" width="146" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="87" translatesAutoresizingMaskIntoConstraints="NO" id="6Lh-eS-fRg">
-                                                <rect key="frame" x="0.0" y="31" width="375" height="107.5"/>
+                                                <rect key="frame" x="0.0" y="26.5" width="320" height="87"/>
                                                 <connections>
-                                                    <segue destination="PE0-pN-S2X" kind="embed" identifier="alcohol" id="f4z-T4-MMw"/>
+                                                    <segue destination="PE0-pN-S2X" kind="embed" identifier="alcohol" id="JwL-zn-lXa"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -680,10 +678,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrh-fh-FOD">
-                                        <rect key="frame" x="0.0" y="277" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="227.5" width="320" height="114"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQD-W3-Sc0">
-                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="304" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="wU9-4v-lNb"/>
@@ -696,9 +694,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="87" translatesAutoresizingMaskIntoConstraints="NO" id="ylD-KL-Pjy">
-                                                <rect key="frame" x="0.0" y="30" width="375" height="108.5"/>
+                                                <rect key="frame" x="0.0" y="30" width="320" height="84"/>
                                                 <connections>
-                                                    <segue destination="PE0-pN-S2X" kind="embed" identifier="nonAlcohol" id="ScI-R3-fWT"/>
+                                                    <segue destination="PE0-pN-S2X" kind="embed" identifier="nonAlcohol" id="O1W-g4-KIS"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -715,10 +713,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oa-M8-2cq">
-                                        <rect key="frame" x="0.0" y="415.5" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="341.5" width="320" height="113.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2n-sg-Aig">
-                                                <rect key="frame" x="8" y="8" width="359" height="1"/>
+                                                <rect key="frame" x="8" y="8" width="304" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="QTP-wx-Q6S"/>
@@ -731,7 +729,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="79.5" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZU-jG-V7D">
-                                                <rect key="frame" x="8" y="30" width="359" height="100.5"/>
+                                                <rect key="frame" x="8" y="30" width="304" height="75.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -788,7 +786,7 @@
             <objects>
                 <collectionViewController id="PE0-pN-S2X" customClass="RecipeElementCollectionViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="F6x-YA-DrU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oRS-lj-8B9">
@@ -799,7 +797,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeElementCell" id="CBm-Px-1bS" customClass="RecipeElementCollectionViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="7" width="85" height="95"/>
+                                <rect key="frame" x="0.0" y="-6" width="85" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="85" height="95"/>
@@ -838,9 +836,9 @@
                                     <constraint firstItem="iTa-cv-ruV" firstAttribute="top" secondItem="CBm-Px-1bS" secondAttribute="top" constant="4" id="rjo-Wv-3GJ"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="ingridientAmountLabel" destination="iTa-cv-ruV" id="le5-7w-nyy"/>
-                                    <outlet property="ingridientImageView" destination="vUM-3I-oJg" id="EFW-sS-oJW"/>
-                                    <outlet property="ingridientNameLabel" destination="KOE-k8-v7G" id="PUi-qQ-BEZ"/>
+                                    <outlet property="ingredientAmountLabel" destination="iTa-cv-ruV" id="aAN-co-z8r"/>
+                                    <outlet property="ingredientImageView" destination="vUM-3I-oJg" id="BPq-Qg-mV7"/>
+                                    <outlet property="ingredientNameLabel" destination="KOE-k8-v7G" id="bZv-9P-UD2"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -891,7 +889,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OOU-5Z-qBb" kind="relationship" relationship="rootViewController" id="BlI-ot-8bs"/>
+                        <segue destination="OOU-5Z-qBb" kind="relationship" relationship="rootViewController" id="YCn-e0-06s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hy-x7-un7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -902,8 +900,8 @@
         <scene sceneID="wHv-h8-ivn">
             <objects>
                 <collectionViewController id="bxO-0W-FZ8" customClass="IngredientsCollectionViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Sde-Vk-mdg">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="479"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Sde-Vk-mdg">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="380"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OmP-SF-y0V">
@@ -945,17 +943,15 @@
                                 <connections>
                                     <outlet property="ingredientImageView" destination="UWa-cq-2ty" id="IoV-Yt-5mc"/>
                                     <outlet property="ingredientNameLabel" destination="uWU-uG-G97" id="WsC-3o-T7e"/>
-                                    <outlet property="ingridientImageView" destination="UWa-cq-2ty" id="vm5-LN-9OV"/>
-                                    <outlet property="ingridientNameLabel" destination="uWU-uG-G97" id="yyb-TE-vcK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="K8n-5i-vF5" customClass="IngredientSectionHeaderCollectionReusableView" customModule="Mix_A_Drink" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjU-QY-zLA">
-                                    <rect key="frame" x="8" y="41" width="327" height="1"/>
+                                    <rect key="frame" x="8" y="41" width="272" height="1"/>
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Zoe-gI-8yS"/>
@@ -991,18 +987,18 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybl-iD-BQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-871" y="2026"/>
+            <point key="canvasLocation" x="-872" y="2065"/>
         </scene>
         <!--Cocktails Search-->
         <scene sceneID="3rr-pp-28J">
             <objects>
                 <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="2a3-fu-tCh" customClass="CocktailListWithSearchViewController" customModule="Mix_A_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="8pr-9X-dv0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Enter cocktail name" id="ETa-bv-Zar">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -1012,33 +1008,33 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cocktailCell" id="wtO-OZ-T12" customClass="CocktailTableViewCell" customModule="Mix_A_Drink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wtO-OZ-T12" id="zXt-VZ-sdI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Zgp-ux-mTp">
-                                            <rect key="frame" x="303" y="30" width="20" height="20"/>
+                                            <rect key="frame" x="248" y="30" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Zgp-ux-mTp" secondAttribute="height" multiplier="1:1" id="OFZ-LA-pxf"/>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="bW4-3R-ODr"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-M6-Jfd">
-                                            <rect key="frame" x="325" y="30" width="20" height="20"/>
+                                            <rect key="frame" x="270" y="30" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Qpf-M6-Jfd" secondAttribute="height" multiplier="1:1" id="SKm-PT-BBq"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-TU-Ogc">
-                                            <rect key="frame" x="347" y="30" width="20" height="20"/>
+                                            <rect key="frame" x="292" y="30" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="4hd-TU-Ogc" secondAttribute="height" multiplier="1:1" id="URK-uM-CkO"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSZ-FJ-8YE">
-                                            <rect key="frame" x="76" y="29" width="225" height="23"/>
+                                            <rect key="frame" x="76" y="29" width="170" height="23"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1142,11 +1138,11 @@
         <image name="Strength.jpg" width="4410" height="3552"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="O6R-ta-Vyz"/>
         <segue reference="TZO-dM-VPz"/>
-        <segue reference="jQd-ie-L5S"/>
-        <segue reference="lUq-Bj-6GS"/>
         <segue reference="gro-tL-VGJ"/>
-        <segue reference="ScI-R3-fWT"/>
+        <segue reference="O1W-g4-KIS"/>
+        <segue reference="eEN-YW-8OV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>
