@@ -9,16 +9,10 @@
 /* Begin PBXBuildFile section */
 		FA211AB51E03C8150060C213 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA211AB41E03C8150060C213 /* String+Extension.swift */; };
 		FA2FC8441E004E1200B6968C /* dataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2FC8431E004E1200B6968C /* dataTypes.swift */; };
-		FA30B1571E2D539B00982471 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */; };
 		FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */; };
 		FA7FF0931E28BFBD00C745B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FF0921E28BFBD00C745B1 /* Constants.swift */; };
 		FA9D2D021E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */; };
 		FA9D2D041E16F22200FE8269 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */; };
-		FA9D2D0A1E16F28100FE8269 /* All.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D051E16F28100FE8269 /* All.jpg */; };
-		FA9D2D0B1E16F28100FE8269 /* Drinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D061E16F28100FE8269 /* Drinks.jpg */; };
-		FA9D2D0C1E16F28100FE8269 /* Colors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D071E16F28100FE8269 /* Colors.jpg */; };
-		FA9D2D0D1E16F28100FE8269 /* Glasses.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D081E16F28100FE8269 /* Glasses.jpg */; };
-		FA9D2D0E1E16F28100FE8269 /* Strength.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D091E16F28100FE8269 /* Strength.jpg */; };
 		FA9D2D101E16F29A00FE8269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D0F1E16F29A00FE8269 /* Assets.xcassets */; };
 		FA9D2D151E16F2B300FE8269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D111E16F2B300FE8269 /* AppDelegate.swift */; };
 		FA9D2D161E16F2B300FE8269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9D2D121E16F2B300FE8269 /* Main.storyboard */; };
@@ -40,6 +34,12 @@
 		FA9D2D391E16F2E400FE8269 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */; };
 		FA9D2D3A1E16F2E400FE8269 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D301E16F2E400FE8269 /* IngredientTableViewController.swift */; };
 		FA9D2D3B1E16F2E400FE8269 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */; };
+		FAF643181E2F590A00506C66 /* All.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643131E2F590A00506C66 /* All.jpg */; };
+		FAF643191E2F590A00506C66 /* Colors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643141E2F590A00506C66 /* Colors.jpg */; };
+		FAF6431A1E2F590A00506C66 /* Drinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643151E2F590A00506C66 /* Drinks.jpg */; };
+		FAF6431B1E2F590A00506C66 /* Glasses.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643161E2F590A00506C66 /* Glasses.jpg */; };
+		FAF6431C1E2F590A00506C66 /* Strength.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643171E2F590A00506C66 /* Strength.jpg */; };
+		FAF6431E1E2F598D00506C66 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,15 +47,9 @@
 		FA2FC7FD1DFD9BBB00B6968C /* Mix A Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix A Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2FC8431E004E1200B6968C /* dataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTypes.swift; sourceTree = "<group>"; };
 		FA2FC8631E01CF5400B6968C /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
-		FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
 		FA7FF0921E28BFBD00C745B1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA9D2D011E16F20B00FE8269 /* Mix_A_Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mix_A_Drink.xcdatamodel; sourceTree = "<group>"; };
 		FA9D2D031E16F22200FE8269 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		FA9D2D051E16F28100FE8269 /* All.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = All.jpg; sourceTree = "<group>"; };
-		FA9D2D061E16F28100FE8269 /* Drinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Drinks.jpg; sourceTree = "<group>"; };
-		FA9D2D071E16F28100FE8269 /* Colors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Colors.jpg; sourceTree = "<group>"; };
-		FA9D2D081E16F28100FE8269 /* Glasses.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Glasses.jpg; sourceTree = "<group>"; };
-		FA9D2D091E16F28100FE8269 /* Strength.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Strength.jpg; sourceTree = "<group>"; };
 		FA9D2D0F1E16F29A00FE8269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA9D2D111E16F2B300FE8269 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA9D2D121E16F2B300FE8269 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +72,12 @@
 		FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D301E16F2E400FE8269 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		FAF643131E2F590A00506C66 /* All.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = All.jpg; sourceTree = "<group>"; };
+		FAF643141E2F590A00506C66 /* Colors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Colors.jpg; sourceTree = "<group>"; };
+		FAF643151E2F590A00506C66 /* Drinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Drinks.jpg; sourceTree = "<group>"; };
+		FAF643161E2F590A00506C66 /* Glasses.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Glasses.jpg; sourceTree = "<group>"; };
+		FAF643171E2F590A00506C66 /* Strength.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Strength.jpg; sourceTree = "<group>"; };
+		FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +135,11 @@
 		FA2FC8341DFF15AE00B6968C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FA9D2D051E16F28100FE8269 /* All.jpg */,
-				FA9D2D061E16F28100FE8269 /* Drinks.jpg */,
-				FA9D2D071E16F28100FE8269 /* Colors.jpg */,
-				FA9D2D081E16F28100FE8269 /* Glasses.jpg */,
-				FA9D2D091E16F28100FE8269 /* Strength.jpg */,
+				FAF643131E2F590A00506C66 /* All.jpg */,
+				FAF643141E2F590A00506C66 /* Colors.jpg */,
+				FAF643151E2F590A00506C66 /* Drinks.jpg */,
+				FAF643161E2F590A00506C66 /* Glasses.jpg */,
+				FAF643171E2F590A00506C66 /* Strength.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		FA9D2D3F1E16F36E00FE8269 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				FA30B1561E2D539B00982471 /* Mix_A_Drink.sqlite */,
+				FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -272,16 +272,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF6431C1E2F590A00506C66 /* Strength.jpg in Resources */,
 				FA9D2D171E16F2B300FE8269 /* LaunchScreen.storyboard in Resources */,
-				FA9D2D0B1E16F28100FE8269 /* Drinks.jpg in Resources */,
-				FA9D2D0A1E16F28100FE8269 /* All.jpg in Resources */,
-				FA9D2D0D1E16F28100FE8269 /* Glasses.jpg in Resources */,
 				FA9D2D161E16F2B300FE8269 /* Main.storyboard in Resources */,
-				FA9D2D0C1E16F28100FE8269 /* Colors.jpg in Resources */,
+				FAF643191E2F590A00506C66 /* Colors.jpg in Resources */,
 				FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */,
+				FAF6431A1E2F590A00506C66 /* Drinks.jpg in Resources */,
+				FAF643181E2F590A00506C66 /* All.jpg in Resources */,
 				FA9D2D101E16F29A00FE8269 /* Assets.xcassets in Resources */,
-				FA9D2D0E1E16F28100FE8269 /* Strength.jpg in Resources */,
-				FA30B1571E2D539B00982471 /* Mix_A_Drink.sqlite in Resources */,
+				FAF6431B1E2F590A00506C66 /* Glasses.jpg in Resources */,
+				FAF6431E1E2F598D00506C66 /* Mix_A_Drink.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +422,7 @@
 				INFOPLIST_FILE = "Mix A Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ad.Mix-A-Drink";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ad.Mix-A-Drink.com.ad.Mix-A-Drink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -436,7 +436,7 @@
 				INFOPLIST_FILE = "Mix A Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ad.Mix-A-Drink";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ad.Mix-A-Drink.com.ad.Mix-A-Drink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

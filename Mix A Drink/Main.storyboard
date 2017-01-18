@@ -1138,11 +1138,11 @@
         <image name="Strength.jpg" width="4410" height="3552"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O6R-ta-Vyz"/>
-        <segue reference="TZO-dM-VPz"/>
         <segue reference="gro-tL-VGJ"/>
         <segue reference="O1W-g4-KIS"/>
+        <segue reference="4Fc-SV-aQr"/>
         <segue reference="eEN-YW-8OV"/>
+        <segue reference="TZO-dM-VPz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
 </document>
