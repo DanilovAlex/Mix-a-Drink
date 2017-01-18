@@ -8,7 +8,7 @@
         <relationship name="cocktail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="recipeAlcohol" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Cocktail" representedClassName="Cocktail" syncable="YES" codeGenerationType="class">
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="instruction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
@@ -27,9 +27,9 @@
         <relationship name="usedIn" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="glass" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Ingredient" representedClassName="Ingredient" isAbstract="YES" syncable="YES" codeGenerationType="class">
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="imageGreyed" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="imageSelected" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageGreyed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageSelected" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isAvailible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -41,8 +41,8 @@
         <relationship name="cocktail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cocktail" inverseName="recipeNonAlcohol" inverseEntity="Cocktail" syncable="YES"/>
     </entity>
     <entity name="Property" representedClassName="Property" isAbstract="YES" syncable="YES" codeGenerationType="class">
-        <attribute name="imageDark" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="imageLight" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageDark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageLight" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>

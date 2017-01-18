@@ -15,7 +15,7 @@ class IngredientTableViewCell: UITableViewCell {
     
     func configureCell(forIngredient ingredient: Ingredient) {
         ingredientNameLabel.text = ingredient.name
-        ingredientImageView.image = UIImage(data: ingredient.image as! Data)
+        ingredientImageView.image = UIImage(named: ingredient.image!)
     }
 
 }

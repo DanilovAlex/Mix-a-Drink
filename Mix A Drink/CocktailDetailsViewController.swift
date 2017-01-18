@@ -32,14 +32,14 @@ class CocktailDetailsViewController: UIViewController {
         
         cocktailImageView.layer.borderColor = UIColor.white.cgColor
         cocktailImageView.layer.borderWidth = 2.0
-        cocktailImageView.image = UIImage(data: cocktail.image as! Data)
+        cocktailImageView.image = UIImage(named: cocktail.image!)
         cocktailImageView.clipsToBounds = true
         
-        cocktailStrengthImageView.image = UIImage(data: cocktail.strength?.imageLight as! Data)
+        cocktailStrengthImageView.image = UIImage(named: (cocktail.strength?.imageLight!)!)
         
-        cocktailColorImageView.image = UIImage(data: cocktail.color?.imageLight as! Data)
+        cocktailColorImageView.image = UIImage(named: (cocktail.color?.imageLight!)!)
         
-        cocktailGlassImageView.image = UIImage(data: cocktail.glass?.imageLight as! Data)
+        cocktailGlassImageView.image = UIImage(named: (cocktail.glass?.imageLight!)!)
         
         cocktailInstructionTextView.text = cocktail.instruction
         

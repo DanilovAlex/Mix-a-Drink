@@ -26,6 +26,6 @@ class PropertyTableViewCell: UITableViewCell {
 
     func configureCell(forProperty property: Property){
         propertyNameLabel.text = property.name
-        propertyImageView.image = UIImage(data: property.imageDark as! Data)
+        propertyImageView.image = UIImage(named: property.imageDark!)
     }
 }

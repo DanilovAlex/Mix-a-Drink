@@ -16,7 +16,7 @@ class RecipeElementCollectionViewCell: UICollectionViewCell {
     
     func configureCell(forRecipeElement element: RecipeElement, andIngredient ingredient: Ingredient){
         ingredientAmountLabel.attributedText = element.amount?.toAmountString
-        ingredientImageView.image = UIImage(data: ingredient.image as! Data)
+        ingredientImageView.image = UIImage(named: ingredient.image!)
         ingredientNameLabel.text = element.name
     }
     

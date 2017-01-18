@@ -159,7 +159,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="All.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-ID-YPR">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="All" translatesAutoresizingMaskIntoConstraints="NO" id="uLD-ID-YPR">
                                                     <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-m3-1bk">
@@ -189,7 +189,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Colors.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qdj-Fj-aHD">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Colors" translatesAutoresizingMaskIntoConstraints="NO" id="Qdj-Fj-aHD">
                                                     <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-zC-BlC">
@@ -219,7 +219,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Strength.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-tJ-3xm">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Strength" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-tJ-3xm">
                                                     <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3p-Sn-P3y">
@@ -249,7 +249,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glasses.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-Xd-PlC">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Glasses" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-Xd-PlC">
                                                     <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-Py-fcX">
@@ -279,7 +279,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drinks.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-8W-CQx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drinks" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-8W-CQx">
                                                     <rect key="frame" x="0.0" y="12" width="320" height="176"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3l-Nx-rB8">
@@ -1123,19 +1123,19 @@
     </scenes>
     <resources>
         <image name="Add to Favorites" width="57" height="36"/>
-        <image name="All.jpg" width="1920" height="650"/>
+        <image name="All" width="1920" height="650"/>
         <image name="Cocktails Tab Icon" width="22" height="29"/>
         <image name="Cocktails Tab Icon Selected" width="22" height="29"/>
-        <image name="Colors.jpg" width="1600" height="1257"/>
-        <image name="Drinks.jpg" width="1024" height="683"/>
+        <image name="Colors" width="1600" height="1257"/>
+        <image name="Drinks" width="1024" height="683"/>
         <image name="Favorite Cocktails Tab Icon" width="37" height="36"/>
         <image name="Favorite Cocktails Tab Icon Selected" width="37" height="36"/>
-        <image name="Glasses.jpg" width="5760" height="3840"/>
+        <image name="Glasses" width="5760" height="3840"/>
         <image name="My Bar Tab Icon" width="31" height="36"/>
         <image name="My Bar Tab Icon Selected" width="31" height="36"/>
         <image name="Search Tab Icon" width="26" height="26"/>
         <image name="Search Tab Icon Selected" width="27" height="27"/>
-        <image name="Strength.jpg" width="4410" height="3552"/>
+        <image name="Strength" width="4410" height="3552"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gro-tL-VGJ"/>

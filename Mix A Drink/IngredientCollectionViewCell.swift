@@ -26,9 +26,9 @@ class IngredientCollectionViewCell: UICollectionViewCell {
     
     func setImage(selected: Bool, forIngredient ingredient: Ingredient) {
         if selected {
-            ingredientImageView.image = UIImage(data: ingredient.imageSelected as! Data)
+            ingredientImageView.image = UIImage(named: ingredient.imageSelected!)
         } else {
-            ingredientImageView.image = UIImage(data: ingredient.imageGreyed as! Data)
+            ingredientImageView.image = UIImage(named: ingredient.imageGreyed!)
         }
     }
     

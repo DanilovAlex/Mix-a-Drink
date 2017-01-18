@@ -34,12 +34,9 @@
 		FA9D2D391E16F2E400FE8269 /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */; };
 		FA9D2D3A1E16F2E400FE8269 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D301E16F2E400FE8269 /* IngredientTableViewController.swift */; };
 		FA9D2D3B1E16F2E400FE8269 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */; };
-		FAF643181E2F590A00506C66 /* All.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643131E2F590A00506C66 /* All.jpg */; };
-		FAF643191E2F590A00506C66 /* Colors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643141E2F590A00506C66 /* Colors.jpg */; };
-		FAF6431A1E2F590A00506C66 /* Drinks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643151E2F590A00506C66 /* Drinks.jpg */; };
-		FAF6431B1E2F590A00506C66 /* Glasses.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643161E2F590A00506C66 /* Glasses.jpg */; };
-		FAF6431C1E2F590A00506C66 /* Strength.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF643171E2F590A00506C66 /* Strength.jpg */; };
-		FAF6431E1E2F598D00506C66 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */; };
+		FAF643221E2F6C8000506C66 /* Mix_A_Drink.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FAF643211E2F6C8000506C66 /* Mix_A_Drink.sqlite */; };
+		FAF643251E2F6D8600506C66 /* Mix_A_Drink.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = FAF643231E2F6D8600506C66 /* Mix_A_Drink.sqlite-shm */; };
+		FAF643261E2F6D8600506C66 /* Mix_A_Drink.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = FAF643241E2F6D8600506C66 /* Mix_A_Drink.sqlite-wal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,12 +69,9 @@
 		FA9D2D2F1E16F2E400FE8269 /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D301E16F2E400FE8269 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
 		FA9D2D311E16F2E400FE8269 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		FAF643131E2F590A00506C66 /* All.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = All.jpg; sourceTree = "<group>"; };
-		FAF643141E2F590A00506C66 /* Colors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Colors.jpg; sourceTree = "<group>"; };
-		FAF643151E2F590A00506C66 /* Drinks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Drinks.jpg; sourceTree = "<group>"; };
-		FAF643161E2F590A00506C66 /* Glasses.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Glasses.jpg; sourceTree = "<group>"; };
-		FAF643171E2F590A00506C66 /* Strength.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Strength.jpg; sourceTree = "<group>"; };
-		FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
+		FAF643211E2F6C8000506C66 /* Mix_A_Drink.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mix_A_Drink.sqlite; sourceTree = "<group>"; };
+		FAF643231E2F6D8600506C66 /* Mix_A_Drink.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mix_A_Drink.sqlite-shm"; sourceTree = "<group>"; };
+		FAF643241E2F6D8600506C66 /* Mix_A_Drink.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mix_A_Drink.sqlite-wal"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,18 +126,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FA2FC8341DFF15AE00B6968C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				FAF643131E2F590A00506C66 /* All.jpg */,
-				FAF643141E2F590A00506C66 /* Colors.jpg */,
-				FAF643151E2F590A00506C66 /* Drinks.jpg */,
-				FAF643161E2F590A00506C66 /* Glasses.jpg */,
-				FAF643171E2F590A00506C66 /* Strength.jpg */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		FA2FC8421E004DFD00B6968C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +149,6 @@
 			children = (
 				FA9D2D0F1E16F29A00FE8269 /* Assets.xcassets */,
 				FA2FC8641E01CF6200B6968C /* Fonts */,
-				FA2FC8341DFF15AE00B6968C /* Images */,
 				FA9D2D3F1E16F36E00FE8269 /* DB */,
 			);
 			name = Resources;
@@ -207,7 +188,9 @@
 		FA9D2D3F1E16F36E00FE8269 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				FAF6431D1E2F598D00506C66 /* Mix_A_Drink.sqlite */,
+				FAF643211E2F6C8000506C66 /* Mix_A_Drink.sqlite */,
+				FAF643231E2F6D8600506C66 /* Mix_A_Drink.sqlite-shm */,
+				FAF643241E2F6D8600506C66 /* Mix_A_Drink.sqlite-wal */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -272,16 +255,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF6431C1E2F590A00506C66 /* Strength.jpg in Resources */,
 				FA9D2D171E16F2B300FE8269 /* LaunchScreen.storyboard in Resources */,
 				FA9D2D161E16F2B300FE8269 /* Main.storyboard in Resources */,
-				FAF643191E2F590A00506C66 /* Colors.jpg in Resources */,
 				FA36F61B1E01D09E00673C07 /* Courgette-Regular.ttf in Resources */,
-				FAF6431A1E2F590A00506C66 /* Drinks.jpg in Resources */,
-				FAF643181E2F590A00506C66 /* All.jpg in Resources */,
+				FAF643261E2F6D8600506C66 /* Mix_A_Drink.sqlite-wal in Resources */,
 				FA9D2D101E16F29A00FE8269 /* Assets.xcassets in Resources */,
-				FAF6431B1E2F590A00506C66 /* Glasses.jpg in Resources */,
-				FAF6431E1E2F598D00506C66 /* Mix_A_Drink.sqlite in Resources */,
+				FAF643251E2F6D8600506C66 /* Mix_A_Drink.sqlite-shm in Resources */,
+				FAF643221E2F6C8000506C66 /* Mix_A_Drink.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

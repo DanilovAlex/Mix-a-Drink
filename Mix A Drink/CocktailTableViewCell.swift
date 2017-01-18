@@ -25,26 +25,26 @@ class CocktailTableViewCell: UITableViewCell {
         backgroundImageView.layer.cornerRadius = 10.0
         cocktailImageView.clipsToBounds = true
         
-        cocktailImageView.image = UIImage(data: cocktail.image as! Data)
+        cocktailImageView.image = UIImage(named: cocktail.image!)
         cocktailImageView.layer.cornerRadius = cocktailImageView.frame.height/2
         cocktailImageView.clipsToBounds = true
 
-        leftPropertyImageView.image = UIImage(data: cocktail.strength?.imageDark as! Data)
-        middlePropertyImageView.image = UIImage(data: cocktail.color?.imageDark as! Data)
-        rightPropertyImageView.image = UIImage(data: cocktail.glass?.imageDark as! Data)
+        leftPropertyImageView.image = UIImage(named: (cocktail.strength?.imageDark!)!)
+        middlePropertyImageView.image = UIImage(named: (cocktail.color?.imageDark!)!)
+        rightPropertyImageView.image = UIImage(named: (cocktail.glass?.imageDark!)!)
         
     }
     
     func configureSearchCell(forCocktail cocktail: Cocktail){
         cocktailNameLabel.text = cocktail.name
         
-        cocktailImageView.image = UIImage(data: cocktail.image as! Data)
+        cocktailImageView.image = UIImage(named: cocktail.image!)
         cocktailImageView.layer.cornerRadius = cocktailImageView.frame.height/2
         cocktailImageView.clipsToBounds = true
         
-        leftPropertyImageView.image = UIImage(data: cocktail.strength?.imageDark as! Data)
-        middlePropertyImageView.image = UIImage(data: cocktail.color?.imageDark as! Data)
-        rightPropertyImageView.image = UIImage(data: cocktail.glass?.imageDark as! Data)
+        leftPropertyImageView.image = UIImage(named: (cocktail.strength?.imageDark!)!)
+        middlePropertyImageView.image = UIImage(named: (cocktail.color?.imageDark!)!)
+        rightPropertyImageView.image = UIImage(named: (cocktail.glass?.imageDark!)!)
     }
     
 }
